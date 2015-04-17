@@ -1,17 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EmptyScrip : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+public class EmptyScrip : MonoBehaviour 
+{
+  //Empty Script that does nothing ;(
+	void Start () 
+  {
 	
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	// Test
-	
+
+	void Update () 
+  {
+
 	}
 }
