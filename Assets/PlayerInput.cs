@@ -10,16 +10,21 @@ public class PlayerInput : MonoBehaviour {
 	private bool grounded;
 	private float hForce;
 	private float vForce;
+	private SoulLink sLink;
 	
 	// Use this for initialization
 	void Start () {
-	
+		sLink = GetComponent<SoulLink> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
-		ReticuleToMousePosition ();
+		if (!sLink.Linked)
+			ReticuleToMousePosition ();
+		else
+			ReticuleToLinkedEntity ();
+
 
 		GetInput ();
 	
@@ -39,9 +44,19 @@ public class PlayerInput : MonoBehaviour {
 		TargetReticule.transform.position = mouseWorldPosition;
 	}
 
+	private void ReticuleToLinkedEntity()
+	{
+		Vector3 entityPosition = sLink.LinkedEntity.transform.position;
+
+		TargetReticule.transform.position = entityPosition;
+	}
+
 	private void GetInput()
 	{
 		hForce = Input.GetAxisRaw ("Horizontal");
+
+		if (Input.GetButtonDown ("Fire1"))
+			EnemyClick ();
 
 		if (!grounded)
 			return;
@@ -50,6 +65,20 @@ public class PlayerInput : MonoBehaviour {
 			vForce = 20F;
 		else
 			vForce = 0;
+	}
+
+	void EnemyClick () 
+	{
+		RaycastHit2D hitInfo = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Camera.main.ScreenToWorldPoint (Input.mousePosition));
+
+		if (hitInfo == true)
+			if (hitInfo.transform.gameObject.tag != "Enemy")
+				return;
+
+		if (!sLink.Linked) 
+			sLink.ToggleLink (hitInfo.transform.gameObject);
+		else if (sLink.Linked)
+			sLink.Unlink();
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
