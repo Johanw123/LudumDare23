@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MenuHandler : MonoBehaviour 
 {
@@ -22,6 +23,9 @@ public class MenuHandler : MonoBehaviour
   void Start()
   {
     ShowMenu(CurrentMenu);
+
+    Toggle hej = GetComponentInChildren<Toggle>();
+    
   }
 
   public void ShowMenu(Menu menu)
