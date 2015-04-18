@@ -1,27 +1,27 @@
 fileFormatVersion: 2
 guid: d6898efc2f02f1b4d9c952f160828e4f
-timeCreated: 1429363980
+timeCreated: 1429364220
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Environment-Atlas-1_0
-    21300002: Environment-Atlas-1_1
-    21300004: Environment-Atlas-1_2
-    21300006: Environment-Atlas-1_3
-    21300008: Environment-Atlas-1_4
-    21300010: Environment-Atlas-1_5
-    21300012: Environment-Atlas-1_6
-    21300014: Environment-Atlas-1_7
-    21300016: Environment-Atlas-1_8
-    21300018: Environment-Atlas-1_9
-    21300020: Environment-Atlas-1_10
-    21300022: Environment-Atlas-1_11
-    21300024: Environment-Atlas-1_12
-    21300026: Environment-Atlas-1_13
-    21300028: Environment-Atlas-1_14
-    21300030: Environment-Atlas-1_15
-    21300032: Environment-Atlas-1_16
-    21300034: Environment-Atlas-1_17
+    21300000: Chain
+    21300002: Chain Holder
+    21300004: Big Block 1
+    21300006: Big Block 2
+    21300008: Big Block 3
+    21300010: Small Block 1
+    21300012: Small Block 2
+    21300014: Small Block 3
+    21300016: Floor Block 1
+    21300018: Floor Block 2
+    21300020: Floor Block 3
+    21300022: Floor 1
+    21300024: Floor 2
+    21300026: Floor 3
+    21300028: Dirt 1
+    21300030: Dirt 2
+    21300032: Dirt 3
+    21300034: Background 1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -67,7 +67,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Environment-Atlas-1_0
+    - name: Chain
       rect:
         serializedVersion: 2
         x: 0
@@ -77,7 +77,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Environment-Atlas-1_1
+    - name: Chain Holder
       rect:
         serializedVersion: 2
         x: 16
@@ -87,7 +87,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Environment-Atlas-1_2
+    - name: Big Block 1
       rect:
         serializedVersion: 2
         x: 0
@@ -97,7 +97,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Environment-Atlas-1_3
+    - name: Big Block 2
       rect:
         serializedVersion: 2
         x: 64
@@ -107,7 +107,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Environment-Atlas-1_4
+    - name: Big Block 3
       rect:
         serializedVersion: 2
         x: 126
@@ -117,7 +117,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Environment-Atlas-1_5
+    - name: Small Block 1
       rect:
         serializedVersion: 2
         x: 0
@@ -127,7 +127,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Environment-Atlas-1_6
+    - name: Small Block 2
       rect:
         serializedVersion: 2
         x: 20
@@ -137,7 +137,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Environment-Atlas-1_7
+    - name: Small Block 3
       rect:
         serializedVersion: 2
         x: 40
@@ -147,7 +147,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Environment-Atlas-1_8
+    - name: Floor Block 1
       rect:
         serializedVersion: 2
         x: 0
@@ -157,7 +157,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Environment-Atlas-1_9
+    - name: Floor Block 2
       rect:
         serializedVersion: 2
         x: 20
@@ -167,7 +167,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Environment-Atlas-1_10
+    - name: Floor Block 3
       rect:
         serializedVersion: 2
         x: 40
@@ -177,7 +177,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Environment-Atlas-1_11
+    - name: Floor 1
       rect:
         serializedVersion: 2
         x: 0
@@ -187,7 +187,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Environment-Atlas-1_12
+    - name: Floor 2
       rect:
         serializedVersion: 2
         x: 0
@@ -197,7 +197,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Environment-Atlas-1_13
+    - name: Floor 3
       rect:
         serializedVersion: 2
         x: 0
@@ -207,7 +207,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Environment-Atlas-1_14
+    - name: Dirt 1
       rect:
         serializedVersion: 2
         x: 0
@@ -217,7 +217,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Environment-Atlas-1_15
+    - name: Dirt 2
       rect:
         serializedVersion: 2
         x: 20
@@ -227,7 +227,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Environment-Atlas-1_16
+    - name: Dirt 3
       rect:
         serializedVersion: 2
         x: 40
@@ -237,7 +237,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Environment-Atlas-1_17
+    - name: Background 1
       rect:
         serializedVersion: 2
         x: 0
