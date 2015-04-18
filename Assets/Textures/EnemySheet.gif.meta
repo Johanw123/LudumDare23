@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e7b44d56a1deb374ea84135ac99f0e5f
-timeCreated: 1429349062
+timeCreated: 1429349482
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,9 @@ TextureImporter:
     21300004: EnemySheet_2
     21300006: EnemySheet_3
     21300008: EnemySheet_4
+    21300010: EnemySheet_5
+    21300012: EnemySheet_6
+    21300014: EnemySheet_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -99,6 +102,36 @@ TextureImporter:
         serializedVersion: 2
         x: 73
         y: 150
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EnemySheet_5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 90
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EnemySheet_6
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 90
+        width: 32
+        height: 57
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: EnemySheet_7
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 90
         width: 32
         height: 58
       alignment: 0
