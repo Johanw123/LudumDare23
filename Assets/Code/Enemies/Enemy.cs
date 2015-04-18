@@ -4,21 +4,21 @@ using System.Collections;
 public class Enemy : MonoBehaviour 
 {
     public float Health, MoveSpeed, MaxSpeed, InvunPeriod, AttackRange, AttackRate;
-    public GameObject Weapon;
+    public string Weakness;
     private float lastHitTime;
-    protected float lastAttackTime;
-    private float[] bounds;
-	public string Weakness;
-
     private string soulLinkType;
+    private float[] bounds;
+    private bool grounded, flip, playerFound;
+    protected float lastAttackTime;
 	protected bool facingRight;
 
+    public GameObject Weapon;
 	private Rigidbody2D rig2D;
     private SpriteRenderer spriRen;
 	private Transform flipCheck;
     private GameObject player;
+    private Animator anim;
     protected Vector3 dist;
-    private bool grounded, flip, playerFound;
 
 	// Use this for initialization
 	public virtual void Start () 
@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour
         spriRen = GetComponent<SpriteRenderer>();
         bounds = new float[]{ spriRen.bounds.size.x / 2, spriRen.bounds.size.y / 2 };
         player = GameObject.Find("Player");
+        anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -41,18 +42,17 @@ public class Enemy : MonoBehaviour
     {
         DetectPlayer();
         if (playerFound)
+        {
+            anim.SetBool("Moving", false);
             Attack();
+        }
         else
             Move();
     }
 
-	public virtual void SoulLink()
-	{
-
-	}
-
 	public virtual void Move()
 	{
+        anim.SetBool("Moving", true);
 		Patrol ();
 	}
 
@@ -123,11 +123,6 @@ public class Enemy : MonoBehaviour
             playerFound = false;
     }   
 
-	public virtual void Attack()
-	{
-            
-	}
-
 	public virtual void Die()
 	{
 		Destroy (gameObject);
@@ -157,5 +152,15 @@ public class Enemy : MonoBehaviour
         spriRen.enabled = false;
         yield return new WaitForSeconds(0.1f);
         spriRen.enabled = true;
+    }
+
+    public virtual void Attack()
+    {
+
+    }
+
+    public virtual void SoulLink()
+    {
+
     }
 }
