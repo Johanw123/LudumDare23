@@ -7,15 +7,15 @@ public class Enemy : MonoBehaviour
     public string Type, Weakness;
     private float lastHitTime;
     private string soulLinkType;
-    private float[] bounds;
-    private bool grounded, flip, playerFound;
+    protected float[] bounds;
+    private bool grounded, flip, wall, playerFound;
     protected float lastAttackTime;
 	protected bool facingRight;
 
     public GameObject Weapon;
 	private Rigidbody2D rig2D;
     private SpriteRenderer spriRen;
-	private Transform flipCheck;
+	private Transform flipCheck, wallCheck;
     private GameObject player;
     private Animator anim;
     protected Vector3 dist;
@@ -24,9 +24,10 @@ public class Enemy : MonoBehaviour
 	public virtual void Start () 
 	{
 		flipCheck = transform.Find ("floorCheck");
+        wallCheck = transform.Find("wallCheck");
 		rig2D = GetComponent<Rigidbody2D> ();
         spriRen = GetComponent<SpriteRenderer>();
-        bounds = new float[]{ spriRen.bounds.size.x / 2, spriRen.bounds.size.y / 2 };
+        bounds = new float[]{ transform.localScale.x /2, transform.localScale.y/2 };
         player = GameObject.Find("Player");
         anim = GetComponent<Animator>();
 	}
@@ -60,7 +61,8 @@ public class Enemy : MonoBehaviour
 	public void Patrol()
 	{
 		flip = Physics2D.Linecast (transform.position, flipCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
-		if(!flip && grounded)
+        wall = Physics2D.Linecast(transform.position, wallCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+		if((!flip || wall) && grounded)
 			Flip ();
 		
 		if (facingRight && (rig2D.velocity.x < MaxSpeed)) 
@@ -112,13 +114,10 @@ public class Enemy : MonoBehaviour
                 bounds[0] = -bounds[0];
             else
                 bounds[0] = +bounds[0];
-            Collider2D col = Physics2D.Raycast(transform.position + new Vector3(bounds[0], bounds[1]), dist).collider;
+            Collider2D col = Physics2D.Raycast(transform.position, dist).collider;
             if (col != null)
-            {
-                Debug.Log(col);
                 if (col.gameObject.tag.Equals("Player"))
                     playerFound = true;
-            }
             else
                 playerFound = false;
         }

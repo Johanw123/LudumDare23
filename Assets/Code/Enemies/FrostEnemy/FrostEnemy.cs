@@ -24,8 +24,7 @@ public class FrostEnemy : Enemy
     {
         if (firstAttack)
             Snowball();
-        else
-            if (Time.time > lastAttackTime + AttackRate)
+        else if (Time.time > lastAttackTime + AttackRate)
                 Snowball();
     }
 
