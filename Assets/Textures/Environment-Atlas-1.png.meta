@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d6898efc2f02f1b4d9c952f160828e4f
-timeCreated: 1429371326
+timeCreated: 1429371806
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -202,8 +202,8 @@ TextureImporter:
         y: 113
         width: 140
         height: 4
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Floor 2
       rect:
@@ -212,8 +212,8 @@ TextureImporter:
         y: 105
         width: 140
         height: 4
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Floor 3
       rect:
@@ -222,8 +222,8 @@ TextureImporter:
         y: 97
         width: 140
         height: 4
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Dirt 1
       rect:
