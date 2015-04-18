@@ -133,14 +133,14 @@ public class Enemy : MonoBehaviour
         soulLinkType = linkType;
     }
 
-	public void ApplyDamage(float Damage)
+	public void ApplyDamage(float damage)
 	{
         if (Time.time > lastHitTime + InvunPeriod)
         {
             if (soulLinkType.Equals(Weakness))
-                Health -= Damage * 2;
+                Health -= damage * 2;
             else
-                Health -= Damage / 2;
+                Health -= damage / 2;
 
             lastHitTime = Time.time;
             StartCoroutine(damageTaken()); 

@@ -3,15 +3,16 @@ using System.Collections;
 
 public class SoulLink : MonoBehaviour {
 
-	public float Health = 15;
 	public GameObject LinkedEntity;
 	public string LinkType;
-
 	public bool Linked = false;
 
+    private PlayerStats stats;
+
 	// Use this for initialization
-	void Start () {
-		
+	void Start () 
+    {
+        stats = GetComponent<PlayerStats>();
 	}
 	
 	// Update is called once per frame
@@ -48,11 +49,9 @@ public class SoulLink : MonoBehaviour {
 
 	public void TakeDamage (float damage)
 	{
-		if (Linked)
-			LinkedEntity.SendMessage ("ApplyDamage", damage);
-		else 
-		{
-			Health -= damage;
-		}
+        if (Linked)
+            LinkedEntity.SendMessage("ApplyDamage", damage);
+        else
+            stats.ApplyDamage(damage);
 	}
 }
