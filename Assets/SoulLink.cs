@@ -3,6 +3,7 @@ using System.Collections;
 
 public class SoulLink : MonoBehaviour {
 
+	public float Health = 15;
 	public GameObject LinkedEntity;
 	public string LinkType;
 
@@ -43,5 +44,15 @@ public class SoulLink : MonoBehaviour {
 
 		if (Linked)
 			LinkedEntity.SendMessage ("ChangeLinkType", type);
+	}
+
+	public void TakeDamage (float damage)
+	{
+		if (Linked)
+			LinkedEntity.SendMessage ("ApplyDamage", damage);
+		else 
+		{
+			Health -= damage;
+		}
 	}
 }
