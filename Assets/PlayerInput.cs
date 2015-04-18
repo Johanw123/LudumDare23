@@ -7,14 +7,16 @@ public class PlayerInput : MonoBehaviour {
 
 	public GameObject TargetReticule;
 
-	private bool grounded;
+    private bool grounded, facingRight;
 	private float hForce;
 	private float vForce;
 	private SoulLink sLink;
+    private Animator anim;
 	
 	// Use this for initialization
 	void Start () {
 		sLink = GetComponent<SoulLink> ();
+        anim = GetComponent<Animator>(); 
 	}
 	
 	// Update is called once per frame
@@ -73,6 +75,17 @@ public class PlayerInput : MonoBehaviour {
 	{
 		hForce = Input.GetAxisRaw ("Horizontal");
 
+        if (hForce != 0)
+            anim.SetBool("Moving", true);
+        else if (hForce == 0)
+            anim.SetBool("Moving", false);  
+
+        if (hForce < 0 && facingRight)
+            Flip();
+
+        if (hForce > 0 && !facingRight)
+            Flip();
+
 		if (Input.GetButtonDown ("Fire1"))
 			EnemyClick ();
 
@@ -84,6 +97,14 @@ public class PlayerInput : MonoBehaviour {
 		else
 			vForce = 0;
 	}
+
+    public void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
 
 	void EnemyClick () 
 	{
