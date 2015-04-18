@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
 	public string Weakness;
 
 	protected bool soulLinked;
+    private string soulLinkType;
 	private bool facingRight;
 
 	private Rigidbody2D rig2D;
@@ -65,7 +66,7 @@ public class Enemy : MonoBehaviour
 
 	public virtual void Attack()
 	{
-
+            
 	}
 
 	public virtual void Die()
@@ -73,13 +74,16 @@ public class Enemy : MonoBehaviour
 		Destroy (gameObject);
 	}
 
+    public void ChangeLinkType(string linkType)
+    {
+        soulLinkType = linkType;
+    }
+
 	public void ApplyDamage(float Damage)
 	{
-		Health -= Damage;
-	}
-
-	public void OnTriggerStay2D(Collider2D col)
-	{
-		Debug.Log (col);
+        if (soulLinkType.Equals(Weakness))
+            Health -= Damage * 2;
+        else
+            Health -= Damage / 2;
 	}
 }
