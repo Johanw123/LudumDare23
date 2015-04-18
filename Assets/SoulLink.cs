@@ -43,13 +43,13 @@ public class SoulLink : MonoBehaviour {
 	void ChangeLinkType (string type) {
 		LinkType = type;
 
-		if (Linked)
+		if (Linked && (LinkedEntity != null))
 			LinkedEntity.SendMessage ("ChangeLinkType", type);
 	}
 
 	public void TakeDamage (float damage)
 	{
-        if (Linked)
+		if (Linked && (LinkedEntity != null))
             LinkedEntity.SendMessage("ApplyDamage", damage);
         else
             stats.ApplyDamage(damage);

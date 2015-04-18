@@ -46,6 +46,9 @@ public class PlayerInput : MonoBehaviour {
 
 	private void ReticuleToLinkedEntity()
 	{
+		if (sLink.LinkedEntity == null)
+			return;
+
 		Vector3 entityPosition = sLink.LinkedEntity.transform.position;
 
 		TargetReticule.transform.position = entityPosition;
@@ -71,14 +74,14 @@ public class PlayerInput : MonoBehaviour {
 	{
 		RaycastHit2D hitInfo = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (Input.mousePosition), Camera.main.ScreenToWorldPoint (Input.mousePosition));
 
-		if (hitInfo == true)
+		if (hitInfo == true) {
 			if (hitInfo.transform.gameObject.tag != "Enemy")
 				return;
 
-		if (!sLink.Linked) 
 			sLink.ToggleLink (hitInfo.transform.gameObject);
+		} 
 		else if (sLink.Linked)
-			sLink.Unlink();
+			sLink.Unlink ();
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
