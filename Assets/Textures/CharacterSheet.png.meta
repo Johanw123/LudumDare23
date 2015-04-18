@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e2cdb09ab40b81747841f11376393bb3
-timeCreated: 1429360883
+timeCreated: 1429374376
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -16,6 +16,11 @@ TextureImporter:
     21300018: CharacterSheet_0
     21300020: CharacterSheet_10
     21300022: CharacterSheet_11
+    21300024: CharacterSheet_12
+    21300026: CharacterSheet_13
+    21300028: CharacterSheet_14
+    21300030: CharacterSheet_15
+    21300032: CharacterSheet_16
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -65,9 +70,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4
-        y: 150
+        y: 250
         width: 32
-        height: 58
+        height: 57
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -75,7 +80,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 38
-        y: 150
+        y: 250
         width: 32
         height: 56
       alignment: 0
@@ -85,7 +90,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 73
-        y: 150
+        y: 250
         width: 32
         height: 58
       alignment: 0
@@ -95,7 +100,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 90
+        y: 190
         width: 32
         height: 58
       alignment: 0
@@ -105,7 +110,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 38
-        y: 90
+        y: 190
         width: 32
         height: 56
       alignment: 0
@@ -114,9 +119,9 @@ TextureImporter:
     - name: CharacterSheet_6
       rect:
         serializedVersion: 2
-        x: 81
-        y: 90
-        width: 31
+        x: 80
+        y: 190
+        width: 32
         height: 58
       alignment: 0
       pivot: {x: .5, y: .5}
@@ -125,7 +130,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 49
+        y: 149
         width: 41
         height: 40
       alignment: 0
@@ -135,7 +140,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 43
-        y: 49
+        y: 149
         width: 42
         height: 40
       alignment: 0
@@ -144,8 +149,8 @@ TextureImporter:
     - name: CharacterSheet_9
       rect:
         serializedVersion: 2
-        x: 87
-        y: 49
+        x: 86
+        y: 149
         width: 42
         height: 40
       alignment: 0
@@ -155,7 +160,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3
-        y: 214
+        y: 314
         width: 38
         height: 34
       alignment: 0
@@ -165,7 +170,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 49
-        y: 212
+        y: 312
         width: 36
         height: 34
       alignment: 0
@@ -175,9 +180,59 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 90
-        y: 209
+        y: 310
         width: 38
         height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CharacterSheet_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 77
+        width: 34
+        height: 62
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CharacterSheet_13
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 78
+        width: 34
+        height: 61
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CharacterSheet_14
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 77
+        width: 34
+        height: 68
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CharacterSheet_15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 27
+        width: 52
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CharacterSheet_16
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 27
+        width: 52
+        height: 42
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d6898efc2f02f1b4d9c952f160828e4f
-timeCreated: 1429364220
+timeCreated: 1429371806
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -22,6 +22,24 @@ TextureImporter:
     21300030: Dirt 2
     21300032: Dirt 3
     21300034: Background 1
+    21300036: Chain
+    21300038: Chain Holder
+    21300040: Big Block 1
+    21300042: Big Block 2
+    21300044: Big Block 3
+    21300046: Small Block 1
+    21300048: Small Block 2
+    21300050: Small Block 3
+    21300052: Floor Block 1
+    21300054: Floor Block 2
+    21300056: Floor Block 3
+    21300058: Floor 1
+    21300060: Floor 2
+    21300062: Floor 3
+    21300064: Dirt 1
+    21300066: Dirt 2
+    21300068: Dirt 3
+    21300070: Background 1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -44,8 +62,8 @@ TextureImporter:
   cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
-  maxTextureSize: 2048
+  textureFormat: -3
+  maxTextureSize: 256
   textureSettings:
     filterMode: 0
     aniso: 16
@@ -74,8 +92,8 @@ TextureImporter:
         y: 228
         width: 12
         height: 28
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Chain Holder
       rect:
@@ -84,38 +102,38 @@ TextureImporter:
         y: 244
         width: 20
         height: 12
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Big Block 1
       rect:
         serializedVersion: 2
         x: 0
-        y: 168
+        y: 167
         width: 56
-        height: 54
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        height: 56
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Big Block 2
       rect:
         serializedVersion: 2
         x: 64
-        y: 168
+        y: 167
         width: 56
-        height: 54
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        height: 56
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Big Block 3
       rect:
         serializedVersion: 2
-        x: 126
-        y: 168
+        x: 128
+        y: 167
         width: 56
-        height: 54
-      alignment: 6
-      pivot: {x: 0, y: 0}
+        height: 56
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Small Block 1
       rect:
@@ -124,8 +142,8 @@ TextureImporter:
         y: 143
         width: 14
         height: 14
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Small Block 2
       rect:
@@ -134,8 +152,8 @@ TextureImporter:
         y: 143
         width: 14
         height: 14
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Small Block 3
       rect:
@@ -144,8 +162,8 @@ TextureImporter:
         y: 143
         width: 14
         height: 14
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Floor Block 1
       rect:
@@ -154,8 +172,8 @@ TextureImporter:
         y: 123
         width: 14
         height: 14
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Floor Block 2
       rect:
@@ -164,8 +182,8 @@ TextureImporter:
         y: 123
         width: 14
         height: 14
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Floor Block 3
       rect:
@@ -174,8 +192,8 @@ TextureImporter:
         y: 123
         width: 14
         height: 14
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Floor 1
       rect:
@@ -214,8 +232,8 @@ TextureImporter:
         y: 75
         width: 14
         height: 14
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Dirt 2
       rect:
@@ -224,8 +242,8 @@ TextureImporter:
         y: 75
         width: 14
         height: 14
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Dirt 3
       rect:
@@ -234,8 +252,8 @@ TextureImporter:
         y: 75
         width: 14
         height: 14
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Background 1
       rect:
@@ -244,8 +262,8 @@ TextureImporter:
         y: 0
         width: 80
         height: 60
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
