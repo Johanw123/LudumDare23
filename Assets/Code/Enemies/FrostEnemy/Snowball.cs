@@ -4,18 +4,20 @@ using System.Collections;
 public class Snowball : MonoBehaviour {
 
     private Vector3 dir;
-    public float Speed;
-    public float Damage;
+    public float Speed, Damage, DespawnTime;
+    private float spawnTime;
 
 	// Use this for initialization
 	void Start () 
     {
- 
+        spawnTime = Time.time;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void Update () 
+    {
+        if (Time.time > spawnTime + DespawnTime)
+            Destroy(gameObject);
 	}
     
     public void Direction(Vector3 dir)
@@ -27,5 +29,14 @@ public class Snowball : MonoBehaviour {
     public void Fire()
     {
         GetComponent<Rigidbody2D>().AddForce(dir * Speed);
+    }
+
+    public void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            col.SendMessage("ApplyDamage", Damage);
+            Destroy(gameObject);
+        }
     }
 }

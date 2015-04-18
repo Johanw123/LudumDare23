@@ -4,13 +4,14 @@ using System.Collections;
 public class Enemy : MonoBehaviour 
 {
     public float Health, MoveSpeed, MaxSpeed, InvunPeriod, AttackRange, AttackRate;
+    public GameObject Weapon;
     private float lastHitTime;
     protected float lastAttackTime;
     private float[] bounds;
 	public string Weakness;
 
     private string soulLinkType;
-	private bool facingRight;
+	protected bool facingRight;
 
 	private Rigidbody2D rig2D;
     private SpriteRenderer spriRen;
@@ -107,10 +108,14 @@ public class Enemy : MonoBehaviour
 
         if (playerInFrontOfEnemy && playerCloseToEnemy)
         {
+            if (facingRight)
+                bounds[0] = -bounds[0];
+            else
+                bounds[0] = +bounds[0];
             Collider2D col = Physics2D.Raycast(transform.position + new Vector3(bounds[0], bounds[1]), dist).collider;
             if (col != null)
-                if(col.gameObject.tag.Equals("Player"))
-                     playerFound = true;
+                if (col.gameObject.tag.Equals("Player"))
+                    playerFound = true;
             else
                 playerFound = false;
         }

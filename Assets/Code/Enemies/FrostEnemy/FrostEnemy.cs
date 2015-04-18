@@ -3,8 +3,6 @@ using System.Collections;
 
 public class FrostEnemy : Enemy
 {
-    public GameObject Weapon;
-
 	public override void Start()
 	{
 		base.Start ();
