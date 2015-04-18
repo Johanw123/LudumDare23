@@ -26,6 +26,11 @@ public class SoulLink : MonoBehaviour {
 		if (LinkedEntity != null) {
 			line.SetPosition (0, this.transform.position);
 			line.SetPosition (1, LinkedEntity.transform.position);
+
+			if (LinkType == "Fire")
+				line.SetColors(Color.red, Color.black);
+			else if (LinkType == "Ice")
+				line.SetColors(Color.blue, Color.black);
 		} else
 		{
 			line.SetPosition (0, this.transform.position);
