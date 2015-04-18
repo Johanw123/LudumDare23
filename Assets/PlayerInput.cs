@@ -25,7 +25,8 @@ public class PlayerInput : MonoBehaviour {
 		else
 			ReticuleToLinkedEntity ();
 
-
+	
+		CheckNeighbouringEnemies ();
 		GetInput ();
 	
 	}
@@ -52,6 +53,20 @@ public class PlayerInput : MonoBehaviour {
 		Vector3 entityPosition = sLink.LinkedEntity.transform.position;
 
 		TargetReticule.transform.position = entityPosition;
+	}
+
+	private void CheckNeighbouringEnemies()
+	{
+		GameObject[] enemyList = GameObject.FindGameObjectsWithTag ("Enemy");
+
+		Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		mouseWorldPosition.z = 0;
+		
+		foreach (GameObject enemy in enemyList)
+		{
+			if (Vector3.Distance(enemy.transform.position,mouseWorldPosition) < 0.5)
+				TargetReticule.transform.position = enemy.transform.position;
+		}
 	}
 
 	private void GetInput()

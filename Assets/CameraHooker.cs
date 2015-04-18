@@ -35,6 +35,6 @@ public class CameraHooker : MonoBehaviour {
 
 	private void CameraMoveTo (Vector3 target)
 	{
-		mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, target, 0.1F);
+		mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, target, 0.03F);
 	}
 }
