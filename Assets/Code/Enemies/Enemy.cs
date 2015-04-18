@@ -114,8 +114,11 @@ public class Enemy : MonoBehaviour
                 bounds[0] = +bounds[0];
             Collider2D col = Physics2D.Raycast(transform.position + new Vector3(bounds[0], bounds[1]), dist).collider;
             if (col != null)
+            {
+                Debug.Log(col);
                 if (col.gameObject.tag.Equals("Player"))
                     playerFound = true;
+            }
             else
                 playerFound = false;
         }

@@ -20,6 +20,9 @@ public class Flamethrower : MonoBehaviour {
     public void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")
+        {
+            col.SendMessage("ChangeLinkType", "Fire");
             col.SendMessage("TakeDamage", Damage);
+        }
     }
 }

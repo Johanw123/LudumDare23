@@ -35,6 +35,7 @@ public class Snowball : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
+            col.SendMessage("ChangeLinkType", "Ice");
             col.SendMessage("ApplyDamage", Damage);
             Destroy(gameObject);
         }
