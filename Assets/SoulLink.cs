@@ -23,10 +23,13 @@ public class SoulLink : MonoBehaviour {
 		if (LinkedEntity == null)
 			Unlink ();
 		
-		if (LinkedEntity != null)
+		if (LinkedEntity != null) {
+			line.SetPosition (0, this.transform.position);
+			line.SetPosition (1, LinkedEntity.transform.position);
+		} else
 		{
-			line.SetPosition(0, this.transform.position);
-			line.SetPosition(1, LinkedEntity.transform.position);
+			line.SetPosition (0, this.transform.position);
+			line.SetPosition (1, this.transform.position);
 		}
 
 	}
