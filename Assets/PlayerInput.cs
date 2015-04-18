@@ -75,6 +75,8 @@ public class PlayerInput : MonoBehaviour {
 	{
 		hForce = Input.GetAxisRaw ("Horizontal");
 
+        anim.SetBool("Grounded", grounded);
+
         if (hForce != 0)
             anim.SetBool("Moving", true);
         else if (hForce == 0)
@@ -92,10 +94,10 @@ public class PlayerInput : MonoBehaviour {
 		if (!grounded)
 			return;
 
-		if (Input.GetButtonDown ("Jump"))
-			vForce = 20F;
-		else
-			vForce = 0;
+        if (Input.GetButtonDown("Jump"))
+            vForce = 20F;
+        else
+            vForce = 0;
 	}
 
     public void Flip()
