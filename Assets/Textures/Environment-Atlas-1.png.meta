@@ -1,9 +1,35 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d6898efc2f02f1b4d9c952f160828e4f
 timeCreated: 1429356338
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
+=======
+guid: 06c471e99ffa7034996747f692add4b8
+timeCreated: 1429360843
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Chain
+    21300002: Chain Holder
+    21300004: Big Block 1
+    21300006: Big Block 2
+    21300008: Big Block 3
+    21300010: Small Block 1
+    21300012: Small Block 2
+    21300014: Small Block 3
+    21300016: Floor Block 1
+    21300018: Floor Block 2
+    21300020: Floor Block 3
+    21300022: Floor 1
+    21300024: Floor 2
+    21300026: Floor 3
+    21300028: Dirt 1
+    21300030: Dirt 2
+    21300032: Dirt 3
+    21300034: Background 1
+>>>>>>> origin/master
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -37,7 +63,11 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
+<<<<<<< HEAD
   spriteMode: 1
+=======
+  spriteMode: 2
+>>>>>>> origin/master
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +78,191 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
+<<<<<<< HEAD
     sprites: []
+=======
+    sprites:
+    - name: Chain
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 228
+        width: 12
+        height: 28
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Chain Holder
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 244
+        width: 20
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Big Block 1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 168
+        width: 56
+        height: 54
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Big Block 2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 168
+        width: 56
+        height: 54
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Big Block 3
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 168
+        width: 56
+        height: 54
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Small Block 1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 143
+        width: 14
+        height: 14
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Small Block 2
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 143
+        width: 14
+        height: 14
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Small Block 3
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 143
+        width: 14
+        height: 14
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Floor Block 1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 123
+        width: 14
+        height: 14
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Floor Block 2
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 123
+        width: 14
+        height: 14
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Floor Block 3
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 123
+        width: 14
+        height: 14
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Floor 1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 113
+        width: 140
+        height: 4
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Floor 2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 105
+        width: 140
+        height: 4
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Floor 3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 97
+        width: 140
+        height: 4
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dirt 1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 75
+        width: 14
+        height: 14
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dirt 2
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 75
+        width: 14
+        height: 14
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dirt 3
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 75
+        width: 14
+        height: 14
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Background 1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 80
+        height: 60
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> origin/master
   spritePackingTag: 
   userData: 
   assetBundleName: 

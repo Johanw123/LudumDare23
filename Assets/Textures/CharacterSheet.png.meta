@@ -1,17 +1,21 @@
 fileFormatVersion: 2
-guid: e7b44d56a1deb374ea84135ac99f0e5f
-timeCreated: 1429349482
+guid: e2cdb09ab40b81747841f11376393bb3
+timeCreated: 1429360883
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: EnemySheet_0
-    21300002: EnemySheet_1
-    21300004: EnemySheet_2
-    21300006: EnemySheet_3
-    21300008: EnemySheet_4
-    21300010: EnemySheet_5
-    21300012: EnemySheet_6
-    21300014: EnemySheet_7
+    21300000: CharacterSheet_1
+    21300002: CharacterSheet_2
+    21300004: CharacterSheet_3
+    21300006: CharacterSheet_4
+    21300008: CharacterSheet_5
+    21300010: CharacterSheet_6
+    21300012: CharacterSheet_7
+    21300014: CharacterSheet_8
+    21300016: CharacterSheet_9
+    21300018: CharacterSheet_0
+    21300020: CharacterSheet_10
+    21300022: CharacterSheet_11
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -57,27 +61,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: EnemySheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 210
-        width: 40
-        height: 40
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: EnemySheet_1
-      rect:
-        serializedVersion: 2
-        x: 54
-        y: 212
-        width: 40
-        height: 38
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: EnemySheet_2
+    - name: CharacterSheet_1
       rect:
         serializedVersion: 2
         x: 4
@@ -87,17 +71,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: EnemySheet_3
+    - name: CharacterSheet_2
       rect:
         serializedVersion: 2
         x: 38
         y: 150
         width: 32
-        height: 58
+        height: 56
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: EnemySheet_4
+    - name: CharacterSheet_3
       rect:
         serializedVersion: 2
         x: 73
@@ -107,7 +91,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: EnemySheet_5
+    - name: CharacterSheet_4
       rect:
         serializedVersion: 2
         x: 3
@@ -117,23 +101,83 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: EnemySheet_6
+    - name: CharacterSheet_5
       rect:
         serializedVersion: 2
         x: 38
         y: 90
         width: 32
-        height: 57
+        height: 56
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: EnemySheet_7
+    - name: CharacterSheet_6
       rect:
         serializedVersion: 2
-        x: 80
+        x: 81
         y: 90
-        width: 32
+        width: 31
         height: 58
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CharacterSheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 49
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CharacterSheet_8
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 49
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CharacterSheet_9
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 49
+        width: 42
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CharacterSheet_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 214
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CharacterSheet_10
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 212
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: CharacterSheet_11
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 209
+        width: 38
+        height: 34
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
