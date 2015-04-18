@@ -1,35 +1,27 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: d6898efc2f02f1b4d9c952f160828e4f
-timeCreated: 1429356338
-licenseType: Free
-TextureImporter:
-  fileIDToRecycleName: {}
-=======
-guid: 06c471e99ffa7034996747f692add4b8
-timeCreated: 1429360843
+timeCreated: 1429363980
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Chain
-    21300002: Chain Holder
-    21300004: Big Block 1
-    21300006: Big Block 2
-    21300008: Big Block 3
-    21300010: Small Block 1
-    21300012: Small Block 2
-    21300014: Small Block 3
-    21300016: Floor Block 1
-    21300018: Floor Block 2
-    21300020: Floor Block 3
-    21300022: Floor 1
-    21300024: Floor 2
-    21300026: Floor 3
-    21300028: Dirt 1
-    21300030: Dirt 2
-    21300032: Dirt 3
-    21300034: Background 1
->>>>>>> origin/master
+    21300000: Environment-Atlas-1_0
+    21300002: Environment-Atlas-1_1
+    21300004: Environment-Atlas-1_2
+    21300006: Environment-Atlas-1_3
+    21300008: Environment-Atlas-1_4
+    21300010: Environment-Atlas-1_5
+    21300012: Environment-Atlas-1_6
+    21300014: Environment-Atlas-1_7
+    21300016: Environment-Atlas-1_8
+    21300018: Environment-Atlas-1_9
+    21300020: Environment-Atlas-1_10
+    21300022: Environment-Atlas-1_11
+    21300024: Environment-Atlas-1_12
+    21300026: Environment-Atlas-1_13
+    21300028: Environment-Atlas-1_14
+    21300030: Environment-Atlas-1_15
+    21300032: Environment-Atlas-1_16
+    21300034: Environment-Atlas-1_17
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -55,7 +47,7 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 0
     aniso: 16
     mipBias: -1
     wrapMode: 1
@@ -63,11 +55,7 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> origin/master
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -78,11 +66,8 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-<<<<<<< HEAD
-    sprites: []
-=======
     sprites:
-    - name: Chain
+    - name: Environment-Atlas-1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -92,7 +77,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Chain Holder
+    - name: Environment-Atlas-1_1
       rect:
         serializedVersion: 2
         x: 16
@@ -102,7 +87,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Big Block 1
+    - name: Environment-Atlas-1_2
       rect:
         serializedVersion: 2
         x: 0
@@ -112,7 +97,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Big Block 2
+    - name: Environment-Atlas-1_3
       rect:
         serializedVersion: 2
         x: 64
@@ -122,7 +107,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Big Block 3
+    - name: Environment-Atlas-1_4
       rect:
         serializedVersion: 2
         x: 126
@@ -132,7 +117,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Small Block 1
+    - name: Environment-Atlas-1_5
       rect:
         serializedVersion: 2
         x: 0
@@ -142,7 +127,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Small Block 2
+    - name: Environment-Atlas-1_6
       rect:
         serializedVersion: 2
         x: 20
@@ -152,7 +137,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Small Block 3
+    - name: Environment-Atlas-1_7
       rect:
         serializedVersion: 2
         x: 40
@@ -162,7 +147,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Floor Block 1
+    - name: Environment-Atlas-1_8
       rect:
         serializedVersion: 2
         x: 0
@@ -172,7 +157,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Floor Block 2
+    - name: Environment-Atlas-1_9
       rect:
         serializedVersion: 2
         x: 20
@@ -182,7 +167,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Floor Block 3
+    - name: Environment-Atlas-1_10
       rect:
         serializedVersion: 2
         x: 40
@@ -192,7 +177,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Floor 1
+    - name: Environment-Atlas-1_11
       rect:
         serializedVersion: 2
         x: 0
@@ -202,7 +187,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Floor 2
+    - name: Environment-Atlas-1_12
       rect:
         serializedVersion: 2
         x: 0
@@ -212,7 +197,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Floor 3
+    - name: Environment-Atlas-1_13
       rect:
         serializedVersion: 2
         x: 0
@@ -222,7 +207,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Dirt 1
+    - name: Environment-Atlas-1_14
       rect:
         serializedVersion: 2
         x: 0
@@ -232,7 +217,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Dirt 2
+    - name: Environment-Atlas-1_15
       rect:
         serializedVersion: 2
         x: 20
@@ -242,7 +227,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Dirt 3
+    - name: Environment-Atlas-1_16
       rect:
         serializedVersion: 2
         x: 40
@@ -252,7 +237,7 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Background 1
+    - name: Environment-Atlas-1_17
       rect:
         serializedVersion: 2
         x: 0
@@ -262,7 +247,6 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
->>>>>>> origin/master
   spritePackingTag: 
   userData: 
   assetBundleName: 
