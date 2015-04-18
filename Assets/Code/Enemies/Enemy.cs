@@ -4,7 +4,7 @@ using System.Collections;
 public class Enemy : MonoBehaviour 
 {
     public float Health, MoveSpeed, MaxSpeed, InvunPeriod, AttackRange, AttackRate;
-    public string Weakness;
+    public string Type, Weakness;
     private float lastHitTime;
     private string soulLinkType;
     private float[] bounds;
@@ -139,8 +139,10 @@ public class Enemy : MonoBehaviour
         {
             if (soulLinkType.Equals(Weakness))
                 Health -= damage * 2;
-            else
+            else if (soulLinkType.Equals(Type))
                 Health -= damage / 2;
+            else
+                Health -= damage;
 
             lastHitTime = Time.time;
             StartCoroutine(damageTaken()); 
