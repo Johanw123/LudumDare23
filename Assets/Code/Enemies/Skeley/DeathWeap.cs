@@ -34,7 +34,7 @@ public class DeathWeap : MonoBehaviour
 
         if (col.gameObject.tag == "Player")
         {   
-            col.SendMessage("ChangeLinkType", "Ice");
+            col.SendMessage("ChangeLinkType", "Death");
             col.SendMessage("ApplyDamage", Damage);
             Destroy(gameObject);    
         }

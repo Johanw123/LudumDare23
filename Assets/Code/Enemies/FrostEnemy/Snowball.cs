@@ -40,7 +40,7 @@ public class Snowball : MonoBehaviour {
             Destroy(gameObject);
         }
 
-        else
+        if (col.gameObject.tag != "Enemy")
             Destroy(gameObject);
     }
 }
