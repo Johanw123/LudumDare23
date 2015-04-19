@@ -16,22 +16,6 @@ public class Player : MonoBehaviour {
   private SoulLink m_soulLink;
   private Animator m_animator;
 
-<<<<<<< HEAD
-	void Start () 
-    {
-         m_controller = GetComponent<CharacterController2D>();
-         m_soulLink = GetComponent<SoulLink>();
-         m_animator = GetComponent<Animator>(); 
-         m_isFacingRight = transform.localScale.x > 0;
-	}
-	
-	void Update() 
-    {
-        if (m_controller.Velocity.y < -25)
-            m_takeFallDamage = true;
-        if (!m_soulLink.Linked)
-            ReticuleToMousePosition();
-=======
   public AudioClip JumpSound;
   public AudioClip LinkSound;
   public AudioClip UnlinkSound;
@@ -44,7 +28,6 @@ public class Player : MonoBehaviour {
     m_soulLink = GetComponent<SoulLink>();
     m_animator = GetComponent<Animator>();
     m_isFacingRight = transform.localScale.x > 0;
-    m_rBod = GetComponent<Rigidbody2D>();
     m_audioSource = GetComponent<AudioSource>();
   }
 
@@ -52,7 +35,7 @@ public class Player : MonoBehaviour {
   {
     if (!m_soulLink.Linked)
       ReticuleToMousePosition();
->>>>>>> origin/master
+
     else
       ReticuleToLinkedEntity();
 
