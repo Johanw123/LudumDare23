@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class CameraHooker : MonoBehaviour {
 
 	public GameObject TargetReticule;
+	public float MinCameraSize;
+	public float MaxCameraSize;
+	public float CameraSizeIncrement;
 
 	private Camera mainCamera;
 
@@ -17,6 +21,7 @@ public class CameraHooker : MonoBehaviour {
 		Vector3 reticulePosition = GetReticulePosition ();
 
 		CameraMoveTo (MiddlePoint (this.transform.position, TargetReticule.transform.position));
+		ResizeCamera (MinCameraSize, MaxCameraSize);
 	}
 
 	private Vector3 GetReticulePosition()
@@ -35,6 +40,39 @@ public class CameraHooker : MonoBehaviour {
 
 	private void CameraMoveTo (Vector3 target)
 	{
-		mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, target, 0.06F);
+		mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, target, Vector3.Distance (mainCamera.transform.position, target)/20);
+	}
+
+	private void ResizeCamera (float minSize, float maxSize)
+	{
+		float objDistanceX, objDistanceY, objDistance;
+
+		objDistanceX = Math.Abs (this.transform.position.x - TargetReticule.transform.position.x);
+		objDistanceY = Math.Abs (this.transform.position.y - TargetReticule.transform.position.y);
+
+		if (objDistanceX > objDistanceY)
+			objDistance = objDistanceX;
+		else
+			objDistance = objDistanceY;
+
+		if (objDistance > maxSize)
+			objDistance = maxSize;
+
+		if (objDistance < minSize)
+			objDistance = minSize;
+
+		if (Camera.main.orthographicSize < (objDistance / 2)) {
+			Camera.main.orthographicSize += CameraSizeIncrement;
+
+			if (Camera.main.orthographicSize > (objDistance / 2))
+				Camera.main.orthographicSize = objDistance / 2;
+		}
+		else if (Camera.main.orthographicSize > (objDistance / 2)) 
+		{
+			Camera.main.orthographicSize -= CameraSizeIncrement;
+
+			if (Camera.main.orthographicSize < (objDistance / 2))
+				Camera.main.orthographicSize = objDistance / 2;
+		}
 	}
 }
