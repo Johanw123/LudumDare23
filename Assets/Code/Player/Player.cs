@@ -3,11 +3,12 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
-    private bool m_isFacingRight, m_takeFallDamage;
+  private bool m_isFacingRight, m_takeFallDamage;
   private CharacterController2D m_controller;
   private float m_normalizedHorizontalSpeed;
 
   public float MaxSpeed = 2f;
+  public float fallDist;
   public float SpeedAccelerationOnGround = 10f;
   public float SpeedAccelerationInAir = 5f;
   public float FallDamage = 1f;
@@ -33,6 +34,8 @@ public class Player : MonoBehaviour {
 
   void Update()
   {
+      if (m_controller.Velocity.y < -fallDist)
+          m_takeFallDamage = true;
     if (!m_soulLink.Linked)
       ReticuleToMousePosition();
 
