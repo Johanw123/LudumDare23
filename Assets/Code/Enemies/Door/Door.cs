@@ -39,6 +39,12 @@ public class Door :Enemy
 
       base.Update();
     }
+     
+    public override void Die()
+    {
+      Destroy(text);
+      base.Die();
+    }
 
     public override void FixedUpdate()
     {
