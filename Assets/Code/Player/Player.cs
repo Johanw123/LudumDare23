@@ -74,7 +74,7 @@ public class Player : MonoBehaviour {
     Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     mouseWorldPosition.z = 0;
 
-    TargetReticule.transform.position = mouseWorldPosition;
+    TargetReticule.transform.position = mouseWorldPosition + new Vector3(0, Mathf.Sin(Time.time) * 0.01f, 0);
   }
 
   private void ReticuleToLinkedEntity()
@@ -105,7 +105,7 @@ public class Player : MonoBehaviour {
   {
     RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Camera.main.ScreenToWorldPoint(Input.mousePosition));
 
-    if (hitInfo != null && hitInfo.collider != null)
+    if (hitInfo == true)
     {
       if (hitInfo.transform.gameObject.tag != "Enemy")
         return;
