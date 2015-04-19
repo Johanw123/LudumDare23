@@ -44,8 +44,8 @@ public class AudioHandler : MonoBehaviour
 
 	void Awake()
   {
-    SfxVolume = PlayerPrefs.GetFloat("sfx_volume");
-    MusicVolume = PlayerPrefs.GetFloat("music_volume");
+    SfxVolume = PlayerPrefs.GetFloat("sfx_volume", 0.5f);
+    MusicVolume = PlayerPrefs.GetFloat("music_volume", 0.5f);
 
     SfxEnabled = PlayerPrefs.GetInt("sfx_enabled") == 1;
     MusicEnabled = PlayerPrefs.GetInt("music_enabled") == 1;

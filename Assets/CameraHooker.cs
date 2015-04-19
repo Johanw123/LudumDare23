@@ -21,10 +21,14 @@ public class CameraHooker : MonoBehaviour {
 	void Update () {
 		Vector3 reticulePosition = GetReticulePosition ();
 
-		if (Vector3.Distance (this.transform.position, TargetReticule.transform.position) < MaxCameraSize)
-			CameraMoveTo (MiddlePoint (this.transform.position, TargetReticule.transform.position));
+		if ((Vector3.Distance (this.transform.position, reticulePosition) > MaxCameraSize) && this.GetComponent<SoulLink> ().Linked)
+			CameraMoveTo (this.transform.position + new Vector3 (0, 0, -10));
 		else
-			CameraMoveTo (this.transform.position + new Vector3(0,0, -10));
+		{
+			Debug.Log (IsOnScreen());
+			if (IsOnScreen ())
+				CameraMoveTo (MiddlePoint (this.transform.position, reticulePosition));
+		}
 
 		ResizeCamera (MinCameraSize, MaxCameraSize);
 	}
@@ -32,6 +36,18 @@ public class CameraHooker : MonoBehaviour {
 	private Vector3 GetReticulePosition()
 	{
 		return TargetReticule.transform.position;
+	}
+
+	private bool IsOnScreen ()
+	{
+		Vector3 viewport = Camera.main.WorldToViewportPoint (this.transform.position);
+
+		if (Math.Abs (viewport.x) > 1)
+			return false;
+		else if (Math.Abs (viewport.y) > 1)
+			return false;
+		else
+			return true;
 	}
 
 	private Vector3 MiddlePoint (Vector3 start, Vector3 end)
@@ -45,7 +61,7 @@ public class CameraHooker : MonoBehaviour {
 
 	private void CameraMoveTo (Vector3 target)
 	{
-		mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, target, Vector3.Distance (mainCamera.transform.position, target)/10);
+		mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, target, Vector3.Distance (mainCamera.transform.position, target)/5);
 	}
 
 	private void ResizeCamera (float minSize, float maxSize)
