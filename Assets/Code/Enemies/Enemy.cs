@@ -3,11 +3,11 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour 
 {
-    public float Health, MoveSpeed, MaxSpeed, InvunPeriod, AttackRange, AttackRate;
+    public float Health, MoveSpeed, MaxSpeed, InvunPeriod, AttackRange, AttackRate, DeathTime;
     public string Type, Weakness;
-    private float lastHitTime;
+    private float lastHitTime, timer;
     private string soulLinkType;
-    private bool grounded, flip, wall, playerFound;
+    private bool grounded, flip, wall, playerFound, dying;
     protected float lastAttackTime;
 	protected bool facingRight;
 
@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     protected SpriteRenderer spriRen;
 	private Transform flipCheck, wallCheck;
     private GameObject player;
-    private Animator anim;
+    protected Animator anim;
     protected Vector3 dist;
 
 	// Use this for initialization
@@ -36,6 +36,11 @@ public class Enemy : MonoBehaviour
 	{
 		if (Health <= 0)
 			Die ();
+        if (dying)
+            timer += Time.deltaTime;
+        if(timer > DeathTime)
+            Destroy(gameObject);
+             
 	}
 
     public virtual void FixedUpdate()
@@ -122,7 +127,8 @@ public class Enemy : MonoBehaviour
 
 	public virtual void Die()
 	{
-		Destroy (gameObject);
+        dying = true;
+        anim.SetBool("Dying", dying);
 	}
 
     public void ChangeLinkType(string linkType)

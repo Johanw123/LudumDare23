@@ -13,6 +13,7 @@ public class Door :Enemy
         spriRen = GetComponent<SpriteRenderer>();
         text = GameObject.Find("Door Text").GetComponent<Text>();
         Player = GameObject.Find("Player");
+        anim = GetComponent<Animator>();
     }
 
     public override void Update()
