@@ -8,7 +8,7 @@ public class Player : MonoBehaviour {
   private float m_normalizedHorizontalSpeed;
 
   public float MaxSpeed = 2f;
-  public float fallDist;
+  public float fallDist, minY;
   public float SpeedAccelerationOnGround = 10f;
   public float SpeedAccelerationInAir = 5f;
   public float FallDamage = 1f;
@@ -16,6 +16,7 @@ public class Player : MonoBehaviour {
   public GameObject TargetReticule;
   private SoulLink m_soulLink;
   private Animator m_animator;
+  private PlayerStats m_stats;
 
   public AudioClip JumpSound;
   public AudioClip LinkSound;
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour {
 
   void Start()
   {
+      m_stats = GetComponent<PlayerStats>();
     m_controller = GetComponent<CharacterController2D>();
     var gameObject = GameObject.Find("/Soul Link");
     if(gameObject != null)
@@ -36,9 +38,19 @@ public class Player : MonoBehaviour {
 
   void Update()
   {
+      if(transform.position.y < minY)
+          DeathByFall();
+
       if (m_controller.Velocity.y < -fallDist)
+      {
           m_takeFallDamage = true;
-    if (!m_soulLink.Linked)
+          m_animator.SetBool("Falling", true);
+      }
+
+       if (m_controller.Velocity.y > -fallDist)
+           m_animator.SetBool("Falling", false);
+
+      if (!m_soulLink.Linked)
       ReticuleToMousePosition();
 
     else
@@ -52,7 +64,6 @@ public class Player : MonoBehaviour {
     var movementFactor = m_controller.State.IsGrounded ? SpeedAccelerationOnGround : SpeedAccelerationInAir;
     m_controller.SetHorizontalForce(Mathf.Lerp(m_controller.Velocity.x, m_normalizedHorizontalSpeed * MaxSpeed, Time.deltaTime * movementFactor));
   }
-
   void HandleInput()
   {
     if(Input.GetKey(KeyCode.D))
@@ -156,6 +167,11 @@ public class Player : MonoBehaviour {
       m_soulLink.TakeDamage(FallDamage);
   }
 
+    private void DeathByFall()
+    {
+        m_animator.SetBool("Falling", true);
+        m_stats.Die();
+    }
 
     public void ChangeLinkType(string type)
     {
