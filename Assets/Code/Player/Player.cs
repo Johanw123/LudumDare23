@@ -30,7 +30,6 @@ public class Player : MonoBehaviour {
     else
       ReticuleToLinkedEntity();
 
-
     CheckNeighbouringEnemies();
     HandleInput();
 

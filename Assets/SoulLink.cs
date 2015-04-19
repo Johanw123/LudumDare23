@@ -24,6 +24,7 @@ public class SoulLink : MonoBehaviour {
 			Unlink ();
 		
 		if (LinkedEntity != null) {
+            line.sortingLayerName = "Foreground";
 			line.SetPosition (0, this.transform.position);
 			line.SetPosition (1, LinkedEntity.transform.position);
 
