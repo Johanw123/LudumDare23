@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d6898efc2f02f1b4d9c952f160828e4f
-timeCreated: 1429444277
+timeCreated: 1429449965
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -46,6 +46,7 @@ TextureImporter:
     21300078: Environment-Atlas-1_3
     21300080: Environment-Atlas-1_4
     21300082: Environment-Atlas-1_5
+    21300084: Environment-Atlas-1_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -69,7 +70,7 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -3
-  maxTextureSize: 256
+  maxTextureSize: 8192
   textureSettings:
     filterMode: 0
     aniso: 16
@@ -328,6 +329,16 @@ TextureImporter:
         y: 152
         width: 14
         height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Environment-Atlas-1_6
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 82
+        width: 198
+        height: 160
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
