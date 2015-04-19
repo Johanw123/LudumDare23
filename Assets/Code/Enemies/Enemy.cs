@@ -7,12 +7,12 @@ public class Enemy : MonoBehaviour
     public string Type, Weakness;
     private float lastHitTime;
     private string soulLinkType;
-    protected float[] bounds;
     private bool grounded, flip, wall, playerFound;
     protected float lastAttackTime;
 	protected bool facingRight;
 
     public GameObject Weapon;
+    public LayerMask mask;
 	private Rigidbody2D rig2D;
     private SpriteRenderer spriRen;
 	private Transform flipCheck, wallCheck;
@@ -27,7 +27,6 @@ public class Enemy : MonoBehaviour
         wallCheck = transform.Find("wallCheck");
 		rig2D = GetComponent<Rigidbody2D> ();
         spriRen = GetComponent<SpriteRenderer>();
-        bounds = new float[]{ transform.localScale.x /2, transform.localScale.y/2 };
         player = GameObject.Find("Player");
         anim = GetComponent<Animator>();
 	}
@@ -110,11 +109,7 @@ public class Enemy : MonoBehaviour
 
         if (playerInFrontOfEnemy && playerCloseToEnemy)
         {
-            if (facingRight)
-                bounds[0] = -bounds[0];
-            else
-                bounds[0] = +bounds[0];
-            Collider2D col = Physics2D.Raycast(transform.position, dist).collider;
+            Collider2D col = Physics2D.Raycast(transform.position, dist, AttackRange, mask).collider;
             if (col != null)
                 if (col.gameObject.tag.Equals("Player"))
                     playerFound = true;

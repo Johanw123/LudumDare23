@@ -39,5 +39,8 @@ public class Snowball : MonoBehaviour {
             col.SendMessage("ApplyDamage", Damage);
             Destroy(gameObject);
         }
+
+        else
+            Destroy(gameObject);
     }
 }

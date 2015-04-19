@@ -39,7 +39,7 @@ public class DeathWeap : MonoBehaviour
             Destroy(gameObject);    
         }
 
-        if (!(col.gameObject.name == "Skeley"))
+        if (col.gameObject.tag != "Enemy")
             Destroy(gameObject);
     }
 }
