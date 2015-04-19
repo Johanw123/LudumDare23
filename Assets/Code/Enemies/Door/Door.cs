@@ -11,10 +11,14 @@ public class Door :Enemy
 
     public override void Start()
     {
-        spriRen = GetComponent<SpriteRenderer>();
-        text = GameObject.Find("Door Text").GetComponent<Text>();
-        doorText = text.text;
-        Player = GameObject.Find("Player");
+      spriRen = GetComponent<SpriteRenderer>();
+      var go = GameObject.Find("Door Text");
+
+      if (go != null)
+        text = go.GetComponent<Text>();
+
+      doorText = text == null ? "" : text.text;
+      Player = GameObject.Find("Player");
     }
 
     public override void Update()
