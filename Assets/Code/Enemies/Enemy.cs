@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     public GameObject Weapon;
     public LayerMask mask;
 	private Rigidbody2D rig2D;
-    private SpriteRenderer spriRen;
+    protected SpriteRenderer spriRen;
 	private Transform flipCheck, wallCheck;
     private GameObject player;
     private Animator anim;
@@ -148,9 +148,9 @@ public class Enemy : MonoBehaviour
 
     public IEnumerator damageTaken()
     {
-        spriRen.enabled = false;
-        yield return new WaitForSeconds(0.1f);
-        spriRen.enabled = true;
+          spriRen.enabled = false;
+          yield return new WaitForSeconds(0.1f);
+          spriRen.enabled = true;
     }
 
     public virtual void Attack()

@@ -5,7 +5,7 @@ public class Door :Enemy
 {
     public override void Start()
     {
-
+        spriRen = GetComponent<SpriteRenderer>();
     }
 
     public override void Update()

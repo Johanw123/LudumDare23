@@ -57,7 +57,7 @@ public class SoulLink : MonoBehaviour {
 			Link (entity);
 	}
 
-	void ChangeLinkType (string type) {
+	public void ChangeLinkType (string type) {
 		LinkType = type;
 
 		if (Linked && (LinkedEntity != null))

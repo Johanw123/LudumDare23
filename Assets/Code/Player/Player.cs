@@ -3,18 +3,18 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
-  private bool m_isFacingRight;
+    private bool m_isFacingRight, m_takeFallDamage;
   private CharacterController2D m_controller;
   private float m_normalizedHorizontalSpeed;
 
   public float MaxSpeed = 2f;
   public float SpeedAccelerationOnGround = 10f;
   public float SpeedAccelerationInAir = 5f;
+  public float FallDamage = 1f;
 
   public GameObject TargetReticule;
   private SoulLink m_soulLink;
   private Animator m_animator;
-  private Rigidbody2D m_rBod;
 
 	void Start () 
     {
@@ -22,20 +22,22 @@ public class Player : MonoBehaviour {
          m_soulLink = GetComponent<SoulLink>();
          m_animator = GetComponent<Animator>(); 
          m_isFacingRight = transform.localScale.x > 0;
-         m_rBod = GetComponent<Rigidbody2D>();
 	}
 	
 	void Update() 
     {
-        Debug.Log(m_rBod.velocity);
-    if (!m_soulLink.Linked)
-      ReticuleToMousePosition();
+        if (m_controller.Velocity.y < -25)
+            m_takeFallDamage = true;
+        if (!m_soulLink.Linked)
+            ReticuleToMousePosition();
     else
       ReticuleToLinkedEntity();
 
     CheckNeighbouringEnemies();
     HandleInput();
 
+    if (m_controller.State.IsGrounded && m_takeFallDamage)
+        TakeFallDamage();
     var movementFactor = m_controller.State.IsGrounded ? SpeedAccelerationOnGround : SpeedAccelerationInAir;
     m_controller.SetHorizontalForce(Mathf.Lerp(m_controller.Velocity.x, m_normalizedHorizontalSpeed * MaxSpeed, Time.deltaTime * movementFactor));
 	}
@@ -122,5 +124,12 @@ public class Player : MonoBehaviour {
   {
     transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
     m_isFacingRight = transform.localScale.x > 0;
+  }
+
+    private void TakeFallDamage()
+  {
+      m_takeFallDamage = false;
+      m_soulLink.ChangeLinkType("Crushing");
+      m_soulLink.TakeDamage(FallDamage);
   }
 }
