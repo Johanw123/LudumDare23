@@ -50,12 +50,6 @@ public class AudioHandler : MonoBehaviour
     SfxEnabled = PlayerPrefs.GetInt("sfx_enabled") == 1;
     MusicEnabled = PlayerPrefs.GetInt("music_enabled") == 1;
 
-    Debug.Log(SfxEnabled);
-    Debug.Log(PlayerPrefs.GetFloat("sfx_volume"));
-    
-    Debug.Log(MusicEnabled);
-    Debug.Log(PlayerPrefs.GetFloat("music_volume"));
-
     SetSfxVolume(SfxVolume);
     SetMusicVolume(MusicVolume);
 
