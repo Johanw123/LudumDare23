@@ -69,7 +69,7 @@ public class CameraHooker : MonoBehaviour {
 		mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, target, Vector3.Distance (mainCamera.transform.position, target)/5);
 	}
 
-	private void ResizeCamera (float minSize, float maxSize)
+	public void ResizeCamera (float minSize, float maxSize)
 	{
 		float objDistanceX, objDistanceY, objDistance;
 
