@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e2cdb09ab40b81747841f11376393bb3
-timeCreated: 1429457245
+timeCreated: 1429478764
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -32,6 +32,19 @@ TextureImporter:
     21300050: CharacterSheet_25
     21300052: CharacterSheet_26
     21300054: CharacterSheet_27
+    21300056: doordeath0
+    21300058: doordeath1
+    21300060: doordeath2
+    21300062: doordeath3
+    21300064: doordeath4
+    21300066: fire0
+    21300068: fire1
+    21300070: fire2
+    21300072: fire3
+    21300074: fire4
+    21300076: bird0
+    21300078: BIRD1
+    21300080: bird2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -354,6 +367,136 @@ TextureImporter:
         y: 547
         width: 46
         height: 50
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: doordeath0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 206
+        width: 198
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: doordeath1
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 204
+        width: 198
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: doordeath2
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 204
+        width: 198
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: doordeath3
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 205
+        width: 198
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: doordeath4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 24
+        width: 198
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire0
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 963
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 963
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire2
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 963
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire3
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 963
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: fire4
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 963
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird0
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 919
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BIRD1
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 916
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bird2
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 916
+        width: 21
+        height: 15
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
