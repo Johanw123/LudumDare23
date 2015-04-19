@@ -26,7 +26,9 @@ public class Player : MonoBehaviour {
   void Start()
   {
     m_controller = GetComponent<CharacterController2D>();
-    m_soulLink = GetComponent<SoulLink>();
+    var gameObject = GameObject.Find("/Soul Link");
+    if(gameObject != null)
+      m_soulLink = gameObject.GetComponent<SoulLink>();
     m_animator = GetComponent<Animator>();
     m_isFacingRight = transform.localScale.x > 0;
     m_audioSource = GetComponent<AudioSource>();
@@ -140,6 +142,7 @@ public class Player : MonoBehaviour {
   private void Flip()
   {
     transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+
     m_isFacingRight = transform.localScale.x > 0;
   }
 
@@ -149,4 +152,15 @@ public class Player : MonoBehaviour {
       m_soulLink.ChangeLinkType("Crushing");
       m_soulLink.TakeDamage(FallDamage);
   }
+
+
+    public void ChangeLinkType(string type)
+    {
+      m_soulLink.ChangeLinkType(type);
+    }
+
+    public void TakeDamage(float damage)
+    {
+      m_soulLink.TakeDamage(damage);
+    }
 }

@@ -4,6 +4,7 @@ using System.Collections;
 public class SoulLink : MonoBehaviour {
 
 	public GameObject LinkedEntity;
+  public GameObject Player;
 	public string LinkType;
 	public bool Linked = false;
 
@@ -13,9 +14,11 @@ public class SoulLink : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
     {
-        stats = GetComponent<PlayerStats>();
+      stats = Player.GetComponent<PlayerStats>();
 		line = GetComponent<LineRenderer> ();
 	}
+
+  private float stuff = -1;
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,18 +27,34 @@ public class SoulLink : MonoBehaviour {
 			Unlink ();
 		
 		if (LinkedEntity != null) {
-            line.sortingLayerName = "Foreground";
-			line.SetPosition (0, this.transform.position);
-			line.SetPosition (1, LinkedEntity.transform.position);
+      
+      line.sortingLayerName = "Foreground";
+      line.SetPosition(0, new Vector3(Player.transform.position.x, Player.transform.position.y, -1));
+      line.SetPosition(1, new Vector3(LinkedEntity.transform.position.x, LinkedEntity.transform.position.y, -1));
 
-			if (LinkType == "Fire")
-				line.SetColors(Color.red, Color.black);
-			else if (LinkType == "Ice")
-				line.SetColors(Color.blue, Color.black);
+      //transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+
+      stuff += 0.013f;
+      if (stuff > 1.0f)
+        stuff = -1.0f;
+      //line.material.mainTextureOffset = new Vector2(line.material.mainTextureOffset.x, stuff);
+      line.material.mainTextureOffset = new Vector2(-stuff, -line.material.mainTextureOffset.y);
+
+      //line.SetColors(Color.red, Color.red);
+
+      
+      
+      if (LinkType == "Fire")
+        line.material.color = Color.red * 1.5f;
+      else if (LinkType == "Ice")
+        line.material.color = Color.blue* 1.5f;
+      else
+        line.material.color = Color.yellow * 1.5f;
+
 		} else
 		{
-			line.SetPosition (0, this.transform.position);
-			line.SetPosition (1, this.transform.position);
+      line.SetPosition(0, Player.transform.position);
+      line.SetPosition(1, Player.transform.position);
 		}
 
 	}
