@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: dc62c4222261a6c44898f5583920c0a7
-timeCreated: 1429441850
+timeCreated: 1429457999
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,11 +10,14 @@ TextureImporter:
     21300006: Small Platform 3
     21300008: Long Chain
     21300010: Pillar 1
-    21300012: Platforms-Atlas_0
-    21300014: Platforms-Atlas_1
-    21300016: Platforms-Atlas_2
-    21300018: Platforms-Atlas_3
-    21300020: Platforms-Atlas_4
+    21300012: Platform Uneven 1
+    21300014: Platform Uneven 2
+    21300016: Platform Uneven 3
+    21300018: Platform Uneven 4
+    21300020: Idon'tevenfuckingknow
+    21300022: Platform Medium Normal
+    21300024: Platform Medium Hook
+    21300026: Platform Medium Big Block
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -77,8 +80,8 @@ TextureImporter:
         y: 906
         width: 42
         height: 46
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Small Platform 2
       rect:
@@ -87,8 +90,8 @@ TextureImporter:
         y: 906
         width: 42
         height: 46
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Small Platform 3
       rect:
@@ -97,8 +100,8 @@ TextureImporter:
         y: 906
         width: 42
         height: 46
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Long Chain
       rect:
@@ -107,7 +110,7 @@ TextureImporter:
         y: 643
         width: 20
         height: 351
-      alignment: 7
+      alignment: 1
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Pillar 1
@@ -120,55 +123,85 @@ TextureImporter:
       alignment: 1
       pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Platforms-Atlas_0
+    - name: Platform Uneven 1
       rect:
         serializedVersion: 2
         x: 224
         y: 902
         width: 42
         height: 74
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Platforms-Atlas_1
+    - name: Platform Uneven 2
       rect:
         serializedVersion: 2
         x: 226
         y: 818
         width: 42
         height: 74
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Platforms-Atlas_2
+    - name: Platform Uneven 3
       rect:
         serializedVersion: 2
         x: 300
         y: 779
         width: 56
         height: 88
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Platforms-Atlas_3
+    - name: Platform Uneven 4
       rect:
         serializedVersion: 2
         x: 259
         y: 629
         width: 126
         height: 74
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Platforms-Atlas_4
+    - name: Idon'tevenfuckingknow
       rect:
         serializedVersion: 2
         x: 572
         y: 816
         width: 378
         height: 172
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Platform Medium Normal
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 385
+        width: 140
+        height: 88
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Platform Medium Hook
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 255
+        width: 140
+        height: 214
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Platform Medium Big Block
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 211
+        width: 140
+        height: 102
+      alignment: 1
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
