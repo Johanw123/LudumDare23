@@ -5,7 +5,7 @@ using System.Collections;
 public class SceneTransition : MonoBehaviour
 {
 
-    public GameObject sceneToLoad;
+    public string sceneToLoad;
     private GameObject fader;
     private bool sceneTransit;
 
