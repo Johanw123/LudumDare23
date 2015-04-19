@@ -18,15 +18,16 @@ public class Player : MonoBehaviour {
 
 	void Start () 
     {
-     m_controller = GetComponent<CharacterController2D>();
-      m_soulLink = GetComponent<SoulLink>();
-    m_animator = GetComponent<Animator>(); 
-    m_isFacingRight = transform.localScale.x > 0;
-    m_rBod = GetComponent<Rigidbody2D>();
+         m_controller = GetComponent<CharacterController2D>();
+         m_soulLink = GetComponent<SoulLink>();
+         m_animator = GetComponent<Animator>(); 
+         m_isFacingRight = transform.localScale.x > 0;
+         m_rBod = GetComponent<Rigidbody2D>();
 	}
 	
 	void Update() 
     {
+        Debug.Log(m_rBod.velocity);
     if (!m_soulLink.Linked)
       ReticuleToMousePosition();
     else
