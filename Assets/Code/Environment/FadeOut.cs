@@ -9,7 +9,7 @@ public class FadeOut : MonoBehaviour
     private float AlphaFadeValue = 0f;
     private Player input;
     private Image fader;
-    public float FadeTime = 5f;
+    public float FadeTime = 0.5f;
 
 	// Use this for initialization
 	void Start () 
@@ -29,12 +29,18 @@ public class FadeOut : MonoBehaviour
         }
 
         if (AlphaFadeValue == 1)
-            Application.LoadLevel(sceneToLoad);
+            StartCoroutine(LoadLevel()); 
 	}
 
     void Fade(string sceneToLoad)
     {
         this.sceneToLoad = sceneToLoad;
         fadeOut = true;
+    }
+
+    private IEnumerator LoadLevel()
+    {
+        yield return new WaitForSeconds(0.2f);
+        Application.LoadLevel(sceneToLoad);
     }
 }
