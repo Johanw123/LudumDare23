@@ -148,7 +148,8 @@ public class Enemy : MonoBehaviour
                 Health -= damage;
 
             lastHitTime = Time.time;
-            StartCoroutine(damageTaken()); 
+            if(Health > 0)
+                StartCoroutine(damageTaken()); 
         }
 	}
 
