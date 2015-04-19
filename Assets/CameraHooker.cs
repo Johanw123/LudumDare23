@@ -26,7 +26,7 @@ public class CameraHooker : MonoBehaviour {
 	void Update () {
 		Vector3 reticulePosition = GetReticulePosition ();
 
-	    if ((Vector3.Distance(this.transform.position, reticulePosition) > MaxCameraSize) && soulLink.Linked)
+	    if ((Vector3.Distance(this.transform.position, reticulePosition) > Camera.main.orthographicSize) && soulLink.Linked)
 			CameraMoveTo (this.transform.position + new Vector3 (0, 0, -10));
 		else
 			CameraMoveTo (MiddlePoint (this.transform.position, reticulePosition));
