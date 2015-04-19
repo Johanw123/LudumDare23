@@ -7,6 +7,7 @@ public class Door :Enemy
     private GameObject Player;
 
     private Text text;
+    private string doorText;
 
     public override void Start()
     {
@@ -30,7 +31,7 @@ public class Door :Enemy
         if (distance < 1.5f)
         {
           text.transform.position = Camera.main.WorldToScreenPoint(transform.position);
-          text.text = "Hello, my name is Door... I will not let you enter. Try something 'Unconventional'.";
+          text.text = doorText;//
         }
         else
           text.text = "";
