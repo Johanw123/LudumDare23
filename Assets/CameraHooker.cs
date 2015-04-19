@@ -26,16 +26,12 @@ public class CameraHooker : MonoBehaviour {
 	void Update () {
 		Vector3 reticulePosition = GetReticulePosition ();
 
-    if ((Vector3.Distance(this.transform.position, reticulePosition) > MaxCameraSize) && soulLink.Linked)
+	    if ((Vector3.Distance(this.transform.position, reticulePosition) > MaxCameraSize) && soulLink.Linked)
 			CameraMoveTo (this.transform.position + new Vector3 (0, 0, -10));
 		else
-		{
-			Debug.Log (IsOnScreen());
-			if (IsOnScreen ())
-				CameraMoveTo (MiddlePoint (this.transform.position, reticulePosition));
-		}
+			CameraMoveTo (MiddlePoint (this.transform.position, reticulePosition));
 
-		ResizeCamera (MinCameraSize, MaxCameraSize);
+//
 	}
 
 	private Vector3 GetReticulePosition()
@@ -60,6 +56,8 @@ public class CameraHooker : MonoBehaviour {
 		Vector3 ret = (end - start) * 0.5f + start;
 
 		ret.z = -10;
+		ret.x = Mathf.Floor (ret.x * 10) / 10;
+		ret.y = Mathf.Floor (ret.y * 10) / 10;
 
 		return ret;
 	}
@@ -69,36 +67,14 @@ public class CameraHooker : MonoBehaviour {
 		mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, target, Vector3.Distance (mainCamera.transform.position, target)/5);
 	}
 
-	public void ResizeCamera (float minSize, float maxSize)
+	public void ResizeCamera (float change)
 	{
-		float objDistanceX, objDistanceY, objDistance;
+		if ((change > 0) && (Camera.main.orthographicSize >= MaxCameraSize))
+			return;
 
-		objDistanceX = Math.Abs (this.transform.position.x - TargetReticule.transform.position.x);
-		objDistanceY = Math.Abs (this.transform.position.y - TargetReticule.transform.position.y);
+		if ((change < 0) && (Camera.main.orthographicSize <= MinCameraSize))
+			return;
 
-		if (objDistanceX > objDistanceY)
-			objDistance = objDistanceX;
-		else
-			objDistance = objDistanceY;
-
-		if (objDistance > maxSize)
-			objDistance = maxSize;
-
-		if (objDistance < minSize)
-			objDistance = minSize;
-
-		if (Camera.main.orthographicSize < (objDistance / 2)) {
-			Camera.main.orthographicSize += CameraSizeIncrement;
-
-			if (Camera.main.orthographicSize > (objDistance / 2))
-				Camera.main.orthographicSize = objDistance / 2;
-		}
-		else if (Camera.main.orthographicSize > (objDistance / 2)) 
-		{
-			Camera.main.orthographicSize -= CameraSizeIncrement;
-
-			if (Camera.main.orthographicSize < (objDistance / 2))
-				Camera.main.orthographicSize = objDistance / 2;
-		}
+		Camera.main.orthographicSize += change;
 	}
 }
