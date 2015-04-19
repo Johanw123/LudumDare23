@@ -89,6 +89,9 @@ public class Player : MonoBehaviour {
     if (Input.GetButtonDown("Fire1"))
       EnemyClick();
 
+	if (Input.GetButtonDown ("Fire2") && m_soulLink.Linked)
+			m_soulLink.Unlink ();
+
     m_animator.SetBool("Moving", m_normalizedHorizontalSpeed != 0);
     m_animator.SetBool("Grounded", m_controller.State.IsGrounded);
 
