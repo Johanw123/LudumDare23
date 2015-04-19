@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d6898efc2f02f1b4d9c952f160828e4f
-timeCreated: 1429458231
+timeCreated: 1429459457
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -302,8 +302,8 @@ TextureImporter:
         y: 214
         width: 28
         height: 28
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Big Brick 1
       rect:
@@ -312,8 +312,8 @@ TextureImporter:
         y: 178
         width: 28
         height: 28
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Brick 1
       rect:
@@ -322,8 +322,8 @@ TextureImporter:
         y: 152
         width: 14
         height: 14
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Brick 2
       rect:
@@ -332,8 +332,8 @@ TextureImporter:
         y: 152
         width: 14
         height: 14
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 8
+      pivot: {x: 1, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Huge Rock
       rect:

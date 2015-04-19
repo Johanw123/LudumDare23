@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: dc62c4222261a6c44898f5583920c0a7
-timeCreated: 1429457999
+timeCreated: 1429459239
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -18,6 +18,9 @@ TextureImporter:
     21300022: Platform Medium Normal
     21300024: Platform Medium Hook
     21300026: Platform Medium Big Block
+    21300028: Wall Big 1
+    21300030: Wall 1
+    21300032: Ladder 1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -111,7 +114,7 @@ TextureImporter:
         width: 20
         height: 351
       alignment: 1
-      pivot: {x: .5, y: 0}
+      pivot: {x: 0, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Pillar 1
       rect:
@@ -202,6 +205,36 @@ TextureImporter:
         height: 102
       alignment: 1
       pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wall Big 1
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 389
+        width: 28
+        height: 168
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wall 1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 476
+        width: 28
+        height: 84
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Ladder 1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 478
+        width: 28
+        height: 84
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
