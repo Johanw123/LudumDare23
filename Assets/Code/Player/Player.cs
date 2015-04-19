@@ -16,18 +16,24 @@ public class Player : MonoBehaviour {
   private Animator m_animator;
   private Rigidbody2D m_rBod;
 
-	void Start () 
-    {
-         m_controller = GetComponent<CharacterController2D>();
-         m_soulLink = GetComponent<SoulLink>();
-         m_animator = GetComponent<Animator>(); 
-         m_isFacingRight = transform.localScale.x > 0;
-         m_rBod = GetComponent<Rigidbody2D>();
-	}
-	
-	void Update() 
-    {
-        Debug.Log(m_rBod.velocity);
+  public AudioClip JumpSound;
+  public AudioClip LinkSound;
+  public AudioClip UnlinkSound;
+
+  private AudioSource m_audioSource;
+
+  void Start()
+  {
+    m_controller = GetComponent<CharacterController2D>();
+    m_soulLink = GetComponent<SoulLink>();
+    m_animator = GetComponent<Animator>();
+    m_isFacingRight = transform.localScale.x > 0;
+    m_rBod = GetComponent<Rigidbody2D>();
+    m_audioSource = GetComponent<AudioSource>();
+  }
+
+  void Update()
+  {
     if (!m_soulLink.Linked)
       ReticuleToMousePosition();
     else
@@ -38,7 +44,7 @@ public class Player : MonoBehaviour {
 
     var movementFactor = m_controller.State.IsGrounded ? SpeedAccelerationOnGround : SpeedAccelerationInAir;
     m_controller.SetHorizontalForce(Mathf.Lerp(m_controller.Velocity.x, m_normalizedHorizontalSpeed * MaxSpeed, Time.deltaTime * movementFactor));
-	}
+  }
 
   void HandleInput()
   {
@@ -68,6 +74,7 @@ public class Player : MonoBehaviour {
     if(m_controller.CanJump && Input.GetButtonDown("Jump"))
     {
       m_controller.Jump();
+      m_audioSource.PlayOneShot(JumpSound);
     }
   }
 
@@ -113,9 +120,16 @@ public class Player : MonoBehaviour {
         return;
 
       m_soulLink.ToggleLink(hitInfo.transform.gameObject);
+      if(m_soulLink.Linked)
+        m_audioSource.PlayOneShot(LinkSound);
+      else
+        m_audioSource.PlayOneShot(UnlinkSound);
     }
     else if (m_soulLink.Linked)
+    {
       m_soulLink.Unlink();
+      m_audioSource.PlayOneShot(UnlinkSound);
+    }
   }
 
   private void Flip()

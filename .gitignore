@@ -36,3 +36,7 @@ ExportedObj/
 Icon?
 ehthumbs.db
 Thumbs.db
+Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll
+Assets/UnityVS/Editor/SyntaxTree.VisualStudio.Unity.Messaging.dll
+Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll.meta
+Assets/UnityVS/Editor/UnityVS.VersionSpecific.dll
