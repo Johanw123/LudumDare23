@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Menu : MonoBehaviour {
-
+public class Menu : MonoBehaviour 
+{
   private Animator m_animator;
   private CanvasGroup m_canvasGroup;
 
@@ -20,17 +20,4 @@ public class Menu : MonoBehaviour {
     var rect = GetComponent<RectTransform>();
     rect.offsetMax = rect.offsetMin = Vector2.zero;
   }
-
-
-	void Update () 
-  {
-    //if(!m_animator.GetCurrentAnimatorStateInfo(0).IsName("Open"))
-    //{
-    //  m_canvasGroup.blocksRaycasts = m_canvasGroup.interactable = false;
-    //}
-    //else
-    //{
-    //  m_canvasGroup.blocksRaycasts = m_canvasGroup.interactable = true;
-    //}
-	}
 }

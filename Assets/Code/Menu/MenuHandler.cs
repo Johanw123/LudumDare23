@@ -23,9 +23,6 @@ public class MenuHandler : MonoBehaviour
   void Start()
   {
     ShowMenu(CurrentMenu);
-
-    Toggle hej = GetComponentInChildren<Toggle>();
-    
   }
 
   public void ShowMenu(Menu menu)
@@ -38,6 +35,4 @@ public class MenuHandler : MonoBehaviour
     CurrentMenu = menu;
     CurrentMenu.IsOpen = true;
   }
-
-
 }
