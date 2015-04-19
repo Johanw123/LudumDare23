@@ -9,19 +9,24 @@ public class CameraHooker : MonoBehaviour {
 	public float MaxCameraSize;
 	public float CameraSizeIncrement;
 
+  private SoulLink soulLink;
 	private Camera mainCamera;
 
 	// Use this for initialization
 	void Start () {
 		mainCamera = Camera.main;
         Cursor.visible = false;
+
+        var gameObject = GameObject.Find("/Soul Link");
+        if (gameObject != null)
+          soulLink = gameObject.GetComponent<SoulLink>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		Vector3 reticulePosition = GetReticulePosition ();
 
-		if ((Vector3.Distance (this.transform.position, reticulePosition) > MaxCameraSize) && this.GetComponent<SoulLink> ().Linked)
+    if ((Vector3.Distance(this.transform.position, reticulePosition) > MaxCameraSize) && soulLink.Linked)
 			CameraMoveTo (this.transform.position + new Vector3 (0, 0, -10));
 		else
 		{
