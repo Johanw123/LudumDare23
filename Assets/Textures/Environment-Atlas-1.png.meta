@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d6898efc2f02f1b4d9c952f160828e4f
-timeCreated: 1429436561
+timeCreated: 1429444277
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -41,6 +41,11 @@ TextureImporter:
     21300068: Dirt 3
     21300070: Background 1
     21300072: Environment-Atlas-1_0
+    21300074: Environment-Atlas-1_1
+    21300076: Environment-Atlas-1_2
+    21300078: Environment-Atlas-1_3
+    21300080: Environment-Atlas-1_4
+    21300082: Environment-Atlas-1_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -269,10 +274,60 @@ TextureImporter:
     - name: Environment-Atlas-1_0
       rect:
         serializedVersion: 2
-        x: 153
-        y: 0
+        x: 151
+        y: 45
         width: 100
         height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Environment-Atlas-1_1
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 3
+        width: 44
+        height: 56
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Environment-Atlas-1_2
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 214
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Environment-Atlas-1_3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 178
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Environment-Atlas-1_4
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 152
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Environment-Atlas-1_5
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 152
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

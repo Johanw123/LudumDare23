@@ -6,6 +6,7 @@ public class VolumeHandler : MonoBehaviour
 {
   Text m_volumeText;
   Slider m_volumeSlider;
+  Toggle m_volumeToggle;
   string m_startingText;
   Color m_startingColor;
   bool m_isMusic;
@@ -14,11 +15,13 @@ public class VolumeHandler : MonoBehaviour
   {
     m_volumeText = GetComponentInChildren<Text>();
     m_volumeSlider = GetComponentInChildren<Slider>();
+    m_volumeToggle = GetComponentInChildren<Toggle>();
 
     m_startingColor = m_volumeText.color;
     m_startingText = m_volumeText.text;
     m_isMusic = m_startingText.Contains("Music");
 
+    m_volumeSlider.enabled = m_volumeToggle.isOn = m_isMusic ? AudioHandler.MusicEnabled : AudioHandler.SfxEnabled;
     m_volumeSlider.value = m_isMusic ? AudioHandler.MusicVolume * 100 : AudioHandler.SfxVolume * 100;
 
     SetVolumeText();
@@ -29,19 +32,22 @@ public class VolumeHandler : MonoBehaviour
     SetVolume(m_volumeSlider.value);
     SetVolumeText();
 
-    UpdateMenuMusicVolume(m_volumeSlider.value);
+    UpdateMenuMusicVolume();
   }
 
-  private void UpdateMenuMusicVolume(float value)
+  private void UpdateMenuMusicVolume()
   {
-    float convertedValue = value / 100;
+    float convertedValue = m_volumeSlider.value / 100;
 
     var gameObject = GameObject.Find("/Music");
     if (m_isMusic && gameObject != null)
     {
       var audioSource = gameObject.GetComponent<AudioSource>();
       if (audioSource != null)
-        audioSource.volume = convertedValue;
+      {
+        audioSource.volume = AudioHandler.MusicEnabled ? convertedValue : 0;
+        Debug.Log(string.Format("enabled: {0}  -  {1}", AudioHandler.MusicEnabled, convertedValue));
+      }
     }
   }
 
@@ -52,15 +58,14 @@ public class VolumeHandler : MonoBehaviour
     if (m_volumeSlider.enabled)
     {
       m_volumeText.color = m_startingColor;
-      SetVolume(m_volumeSlider.value);
-      UpdateMenuMusicVolume(m_volumeSlider.value);
     }
     else
     {
       m_volumeText.color = new Color(0.5f, 0.5f, 0.5f);
-      SetVolume(0);
-      UpdateMenuMusicVolume(0);
     }
+
+    ToggleMute();
+    UpdateMenuMusicVolume();
   }
 
   private void SetVolume(float value)
@@ -71,6 +76,14 @@ public class VolumeHandler : MonoBehaviour
       AudioHandler.SetMusicVolume(convertedValue);
     else
       AudioHandler.SetSfxVolume(convertedValue);
+  }
+
+  private void ToggleMute()
+  {
+    if (m_isMusic)
+      AudioHandler.SetMuteMusic(m_volumeSlider.enabled);
+    else
+      AudioHandler.SetMuteSfx(m_volumeSlider.enabled);
   }
 
   private void SetVolumeText()

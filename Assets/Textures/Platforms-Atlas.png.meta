@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: dc62c4222261a6c44898f5583920c0a7
-timeCreated: 1429436190
+timeCreated: 1429441850
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -11,6 +11,10 @@ TextureImporter:
     21300008: Long Chain
     21300010: Pillar 1
     21300012: Platforms-Atlas_0
+    21300014: Platforms-Atlas_1
+    21300016: Platforms-Atlas_2
+    21300018: Platforms-Atlas_3
+    21300020: Platforms-Atlas_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -115,6 +119,56 @@ TextureImporter:
         height: 158
       alignment: 1
       pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Platforms-Atlas_0
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 902
+        width: 42
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Platforms-Atlas_1
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 818
+        width: 42
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Platforms-Atlas_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 779
+        width: 56
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Platforms-Atlas_3
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 629
+        width: 126
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Platforms-Atlas_4
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 816
+        width: 378
+        height: 172
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
