@@ -14,6 +14,7 @@ public class CameraHooker : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		mainCamera = Camera.main;
+        Cursor.visible = false;
 	}
 	
 	// Update is called once per frame
