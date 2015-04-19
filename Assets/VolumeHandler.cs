@@ -29,17 +29,19 @@ public class VolumeHandler : MonoBehaviour
     SetVolume(m_volumeSlider.value);
     SetVolumeText();
 
-    UpdateMenuMusicVolume();
+    UpdateMenuMusicVolume(m_volumeSlider.value);
   }
 
-  private void UpdateMenuMusicVolume()
+  private void UpdateMenuMusicVolume(float value)
   {
+    float convertedValue = value / 100;
+
     var gameObject = GameObject.Find("/Music");
-    if(gameObject != null)
+    if (m_isMusic && gameObject != null)
     {
       var audioSource = gameObject.GetComponent<AudioSource>();
       if (audioSource != null)
-        audioSource.volume = m_volumeSlider.value / 100;
+        audioSource.volume = convertedValue;
     }
   }
 
@@ -51,11 +53,13 @@ public class VolumeHandler : MonoBehaviour
     {
       m_volumeText.color = m_startingColor;
       SetVolume(m_volumeSlider.value);
+      UpdateMenuMusicVolume(m_volumeSlider.value);
     }
     else
     {
       m_volumeText.color = new Color(0.5f, 0.5f, 0.5f);
       SetVolume(0);
+      UpdateMenuMusicVolume(0);
     }
   }
 
