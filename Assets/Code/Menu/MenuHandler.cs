@@ -15,7 +15,7 @@ public class MenuHandler : MonoBehaviour
 
   public void OnPlayGame()
   {
-    Application.LoadLevel("basicLevel"); 
+    Application.LoadLevel("LevelOne"); 
   }
 
   public Menu CurrentMenu;
