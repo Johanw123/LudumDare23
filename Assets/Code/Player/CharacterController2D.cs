@@ -202,7 +202,7 @@ public class CharacterController2D : MonoBehaviour
 			offset = isRight ? ((raycastHit.point.x - _transform.position.x) - halfWidth) : (halfWidth - (_transform.position.x - raycastHit.point.x));
 		}
 
-		deltaMovement.x += offset;
+		deltaMovement.x += offset * 0.1f;
 	}
 
 	private void CalculateRayOrigins()
