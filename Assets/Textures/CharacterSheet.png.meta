@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e2cdb09ab40b81747841f11376393bb3
-timeCreated: 1429457245
+timeCreated: 1429475610
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -32,6 +32,11 @@ TextureImporter:
     21300050: CharacterSheet_25
     21300052: CharacterSheet_26
     21300054: CharacterSheet_27
+    21300056: RockDeath0
+    21300058: RockDeath1
+    21300060: RockDeath2
+    21300062: RockDeath3
+    21300064: RockDeath4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -301,7 +306,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 370
+        y: 371
         width: 198
         height: 160
       alignment: 0
@@ -331,7 +336,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 698
-        y: 373
+        y: 374
         width: 198
         height: 160
       alignment: 0
@@ -354,6 +359,56 @@ TextureImporter:
         y: 547
         width: 46
         height: 50
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RockDeath0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 202
+        width: 198
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RockDeath1
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 200
+        width: 198
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RockDeath2
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 200
+        width: 198
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RockDeath3
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 201
+        width: 198
+        height: 160
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RockDeath4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 19
+        width: 198
+        height: 160
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
