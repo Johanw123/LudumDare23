@@ -57,6 +57,9 @@ public class Player : MonoBehaviour {
       m_normalizedHorizontalSpeed = 0;
     }
 
+    if (Input.GetButtonDown("Fire1"))
+      EnemyClick();
+
     m_animator.SetBool("Moving", m_normalizedHorizontalSpeed != 0);
     m_animator.SetBool("Grounded", m_controller.State.IsGrounded);
 
@@ -102,7 +105,7 @@ public class Player : MonoBehaviour {
   {
     RaycastHit2D hitInfo = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Camera.main.ScreenToWorldPoint(Input.mousePosition));
 
-    if (hitInfo == true)
+    if (hitInfo != null && hitInfo.collider != null)
     {
       if (hitInfo.transform.gameObject.tag != "Enemy")
         return;
