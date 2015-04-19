@@ -14,17 +14,19 @@ public class Player : MonoBehaviour {
   public GameObject TargetReticule;
   private SoulLink m_soulLink;
   private Animator m_animator;
+  private Rigidbody2D m_rBod;
 
 	void Start () 
-  {
-    m_controller = GetComponent<CharacterController2D>();
-    m_soulLink = GetComponent<SoulLink>();
+    {
+     m_controller = GetComponent<CharacterController2D>();
+      m_soulLink = GetComponent<SoulLink>();
     m_animator = GetComponent<Animator>(); 
     m_isFacingRight = transform.localScale.x > 0;
+    m_rBod = GetComponent<Rigidbody2D>();
 	}
 	
 	void Update() 
-  {
+    {
     if (!m_soulLink.Linked)
       ReticuleToMousePosition();
     else
