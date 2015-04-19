@@ -72,6 +72,9 @@ public class Player : MonoBehaviour {
       m_normalizedHorizontalSpeed = 0;
     }
 
+	if (Input.GetAxis ("Mouse ScrollWheel") != 0)
+			this.SendMessage ("ResizeCamera", Input.GetAxis ("Mouse ScrollWheel"));
+
     if (Input.GetButtonDown("Fire1"))
       EnemyClick();
 
