@@ -20,7 +20,11 @@ public class CameraHooker : MonoBehaviour {
 	void Update () {
 		Vector3 reticulePosition = GetReticulePosition ();
 
-		CameraMoveTo (MiddlePoint (this.transform.position, TargetReticule.transform.position));
+		if (Vector3.Distance (this.transform.position, TargetReticule.transform.position) < MaxCameraSize)
+			CameraMoveTo (MiddlePoint (this.transform.position, TargetReticule.transform.position));
+		else
+			CameraMoveTo (this.transform.position + new Vector3(0,0, -10));
+
 		ResizeCamera (MinCameraSize, MaxCameraSize);
 	}
 
@@ -40,7 +44,7 @@ public class CameraHooker : MonoBehaviour {
 
 	private void CameraMoveTo (Vector3 target)
 	{
-		mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, target, Vector3.Distance (mainCamera.transform.position, target)/20);
+		mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, target, Vector3.Distance (mainCamera.transform.position, target)/10);
 	}
 
 	private void ResizeCamera (float minSize, float maxSize)
