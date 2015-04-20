@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d6898efc2f02f1b4d9c952f160828e4f
-timeCreated: 1429479592
+timeCreated: 1429558244
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -51,6 +51,7 @@ TextureImporter:
     21300088: Weird Rock Explosion
     21300090: Weird Rock Eyes
     21300092: Environment-Atlas-1_0
+    21300094: GlowingYellowAsshole
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -382,6 +383,16 @@ TextureImporter:
         x: 261
         y: 77
         width: 105
+        height: 100
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: GlowingYellowAsshole
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 8
+        width: 69
         height: 100
       alignment: 0
       pivot: {x: .5, y: .5}

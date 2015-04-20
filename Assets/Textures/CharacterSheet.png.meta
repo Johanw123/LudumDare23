@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e2cdb09ab40b81747841f11376393bb3
-timeCreated: 1429478764
+timeCreated: 1429557702
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -45,6 +45,7 @@ TextureImporter:
     21300076: bird0
     21300078: BIRD1
     21300080: bird2
+    21300082: Cloud
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -497,6 +498,16 @@ TextureImporter:
         y: 916
         width: 21
         height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cloud
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 699
+        width: 86
+        height: 53
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
