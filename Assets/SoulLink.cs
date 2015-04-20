@@ -86,7 +86,10 @@ public class SoulLink : MonoBehaviour {
 	public void TakeDamage (float damage)
 	{
 		if (Linked && (LinkedEntity != null))
-            LinkedEntity.SendMessage("ApplyDamage", damage);
+		{
+			LinkedEntity.SendMessage ("ApplyDamage", damage);
+			stats.ApplyDamage (0);
+		}
         else
             stats.ApplyDamage(damage);
 	}

@@ -19,7 +19,8 @@ public class SceneTransition : MonoBehaviour
 	void Update () 
     {
         if (sceneTransit)
-            fader.SendMessage("Fade", sceneToLoad);
+            //fader.SendMessage("Fade", sceneToLoad);
+			Application.LoadLevel (sceneToLoad);
 	}
 
     void OnTriggerEnter2D(Collider2D col)
