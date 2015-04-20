@@ -306,6 +306,7 @@ public class CharacterController2D : MonoBehaviour
 
 	private void HandleVerticalSlope(ref Vector2 deltaMovement)
 	{
+    return;
 		var center = (_raycastBottomLeft.x + _raycastBottomRight.x) / 2;
 		var direction = -Vector2.up;
 
