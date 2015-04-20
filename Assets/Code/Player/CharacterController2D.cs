@@ -336,6 +336,7 @@ public class CharacterController2D : MonoBehaviour
 
 	private bool HandleHorizontalSlope(ref Vector2 deltaMovement, float angle, bool isGoingRight)
 	{
+    return false;
 		if (Mathf.RoundToInt(angle) == 90)
 			return false;
 
