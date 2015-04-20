@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
 	protected bool facingRight;
 
     public GameObject Weapon;
-    public LayerMask mask;
+    public LayerMask mask, flipMask;
 	private Rigidbody2D rig2D;
     protected SpriteRenderer spriRen;
 	private Transform flipCheck, wallCheck;
@@ -64,8 +64,8 @@ public class Enemy : MonoBehaviour
     //Basic patrol movement.
 	public void Patrol()
 	{
-		flip = Physics2D.Linecast (transform.position, flipCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
-        wall = Physics2D.Linecast(transform.position, wallCheck.position, 1 << LayerMask.NameToLayer("Ground"));
+		flip = Physics2D.Linecast (transform.position, flipCheck.position, flipMask);
+        wall = Physics2D.Linecast(transform.position, wallCheck.position, flipMask);
 		if((!flip || wall) && grounded)
 			Flip ();
 		
@@ -92,6 +92,8 @@ public class Enemy : MonoBehaviour
     {
         if(coll.gameObject.tag == "Ground")
             grounded = true;
+        if (coll.gameObject.tag == "Enemy")
+            Flip();
     }
 
     private void OnCollisionExit2D(Collision2D coll)
@@ -142,13 +144,11 @@ public class Enemy : MonoBehaviour
         {
             if (soulLinkType.Equals(Weakness))
                 Health -= damage * 2;
-            else if (soulLinkType.Equals(Type))
+            else if (!soulLinkType.Equals(Type))
                 Health -= damage / 2;
-            else
-                Health -= damage;
 
             lastHitTime = Time.time;
-            if(Health > 0)
+            if(Health > 0 && !soulLinkType.Equals(Type))
                 StartCoroutine(damageTaken()); 
         }
 	}
