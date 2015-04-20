@@ -30,6 +30,7 @@ public class MenuHandler : MonoBehaviour
       m_canvasGroup = go.GetComponent<CanvasGroup>();
     }
 
+    HideCredits();
     ShowMenu(CurrentMenu);
   }
 
