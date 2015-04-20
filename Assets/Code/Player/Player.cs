@@ -92,6 +92,9 @@ public class Player : MonoBehaviour {
 	if (Input.GetButtonDown ("Fire2") && m_soulLink.Linked)
 			m_soulLink.Unlink ();
 
+	if (Input.GetButtonDown ("Fire3"))
+			GameObject.Find ("Player").SendMessage ("Die");
+
     m_animator.SetBool("Moving", m_normalizedHorizontalSpeed != 0);
     m_animator.SetBool("Grounded", m_controller.State.IsGrounded);
 
