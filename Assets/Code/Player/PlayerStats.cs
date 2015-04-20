@@ -36,7 +36,8 @@ public class PlayerStats : MonoBehaviour
 
     public void Die()
     {
-        fader.SendMessage("Fade", Application.loadedLevelName);
+		Application.LoadLevel (Application.loadedLevelName);
+        //fader.SendMessage("Fade", Application.loadedLevelName);
     }
 
     public IEnumerator damageTaken()
