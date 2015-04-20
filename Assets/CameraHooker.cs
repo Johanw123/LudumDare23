@@ -17,7 +17,7 @@ public class CameraHooker : MonoBehaviour {
 		mainCamera = Camera.main;
         Cursor.visible = false;
 
-        var gameObject = GameObject.Find("/Soul Link");
+        var gameObject = GameObject.Find("Soul Link");
         if (gameObject != null)
           soulLink = gameObject.GetComponent<SoulLink>();
 	}

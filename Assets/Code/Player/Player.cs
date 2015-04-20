@@ -28,7 +28,7 @@ public class Player : MonoBehaviour {
   {
       m_stats = GetComponent<PlayerStats>();
     m_controller = GetComponent<CharacterController2D>();
-    var gameObject = GameObject.Find("/Soul Link");
+    var gameObject = GameObject.Find("Soul Link");
     if(gameObject != null)
       m_soulLink = gameObject.GetComponent<SoulLink>();
     m_animator = GetComponent<Animator>();
