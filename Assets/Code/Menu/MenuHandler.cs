@@ -13,6 +13,8 @@ public class MenuHandler : MonoBehaviour
 #endif
   }
 
+  private CanvasGroup m_canvasGroup;
+
   public void OnPlayGame()
   {
     Application.LoadLevel("LevelOne"); 
@@ -22,6 +24,12 @@ public class MenuHandler : MonoBehaviour
 
   void Start()
   {
+    GameObject go = GameObject.Find("Credits");
+    if (go != null)
+    {
+      m_canvasGroup = go.GetComponent<CanvasGroup>();
+    }
+
     ShowMenu(CurrentMenu);
   }
 
@@ -34,5 +42,15 @@ public class MenuHandler : MonoBehaviour
 
     CurrentMenu = menu;
     CurrentMenu.IsOpen = true;
+  }
+
+  public void ShowCredits()
+  {
+    m_canvasGroup.alpha = 1.0f;
+  }
+
+  public void HideCredits()
+  {
+    m_canvasGroup.alpha = 0.0f;
   }
 }
