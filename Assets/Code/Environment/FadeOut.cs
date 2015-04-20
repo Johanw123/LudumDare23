@@ -7,7 +7,9 @@ public class FadeOut : MonoBehaviour
     private bool fadeOut = false;
     private string sceneToLoad;
     private float AlphaFadeValue = 0f;
-    private Player input;
+    private float AlphaFadeValue2 = 2f;
+    private SpriteRenderer playerRen;
+    private Player playerScr;
     private Image fader;
     public float FadeTime = 0.5f;
 
@@ -15,7 +17,8 @@ public class FadeOut : MonoBehaviour
 	void Start () 
     {
         fader = GetComponent<Image>();
-        input = GameObject.Find("Player").GetComponent<Player>();
+        playerScr = GameObject.Find("Player").GetComponent<Player>();
+        playerRen = GameObject.Find("Player").GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
@@ -23,9 +26,17 @@ public class FadeOut : MonoBehaviour
     {
         if (fadeOut)
         {
-            input.enabled = false;
             AlphaFadeValue = Mathf.Clamp01(AlphaFadeValue + (Time.deltaTime / FadeTime));
+            AlphaFadeValue2 = Mathf.Clamp01(AlphaFadeValue2 - (Time.deltaTime /(FadeTime/4)));
             fader.color = new Color(0, 0, 0, AlphaFadeValue);
+            playerRen.color = new Color(0, 0, 0, AlphaFadeValue2);
+            playerScr.enabled = false;
+
+            if (sceneToLoad != Application.loadedLevelName)
+            {
+                playerScr.m_controller.SetHorizontalForce(0f);
+                playerScr.m_controller.SetVerticalForce(0f);
+            }
         }
 
         if (AlphaFadeValue == 1)

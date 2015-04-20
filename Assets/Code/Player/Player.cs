@@ -4,7 +4,7 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
   private bool m_isFacingRight, m_takeFallDamage;
-  private CharacterController2D m_controller;
+  public CharacterController2D m_controller;
   private float m_normalizedHorizontalSpeed;
 
   public float MaxSpeed = 2f;
